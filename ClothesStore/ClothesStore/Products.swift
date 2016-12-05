@@ -13,18 +13,18 @@ import Foundation
  */
 enum Products {
     /// Retrieve all products
-    case All
+    case all
     /// Retrieve a specific product
-    case Get(String)
+    case get(String)
 }
 
 /// Products Endpoint Implementation
 extension Products: Endpoint {
     var url: String {
         switch self {
-        case .All:
+        case .all:
             return "/products"
-        case .Get(let id):
+        case .get(let id):
             return "/products/" + id
         }
     }

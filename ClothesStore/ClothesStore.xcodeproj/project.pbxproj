@@ -22,6 +22,12 @@
 		17DFC3311DF60B0400BA6E69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DFC3301DF60B0400BA6E69 /* CoreData.framework */; };
 		17DFC3341DF60B2B00BA6E69 /* ClothesStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17DFC3321DF60B2B00BA6E69 /* ClothesStore.xcdatamodeld */; };
 		17DFC3371DF60C0A00BA6E69 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17DFC3361DF60C0A00BA6E69 /* Product.swift */; };
+		17F42A331DF6277C00F89314 /* ManagedObjectContextSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A321DF6277C00F89314 /* ManagedObjectContextSettable.swift */; };
+		17F42A351DF6279B00F89314 /* SyncCoordinatorSettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A341DF6279B00F89314 /* SyncCoordinatorSettable.swift */; };
+		17F42A3A1DF62A9E00F89314 /* ChangeProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A391DF62A9E00F89314 /* ChangeProcessor.swift */; };
+		17F42A3D1DF62AD700F89314 /* ProductDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */; };
+		17F42A3F1DF6304A00F89314 /* SyncCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A3E1DF6304A00F89314 /* SyncCoordinator.swift */; };
+		17F42A411DF633F300F89314 /* ProductsDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F42A401DF633F300F89314 /* ProductsDownloader.swift */; };
 		264CE506FF8FAEE548AE5050 /* Pods_ClothesStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B6C421B9CE556E367089711 /* Pods_ClothesStore.framework */; };
 		38DDB73117E28034E9D28E33 /* Pods_ClothesStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2168523C9C9E6451FE59A9A9 /* Pods_ClothesStoreTests.framework */; };
 		7F63E46E6E202D38BBA1341E /* Pods_ClothesStoreUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC29F4E217882ACED699BB71 /* Pods_ClothesStoreUITests.framework */; };
@@ -67,6 +73,12 @@
 		17DFC3301DF60B0400BA6E69 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		17DFC3331DF60B2B00BA6E69 /* ClothesStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClothesStore.xcdatamodel; sourceTree = "<group>"; };
 		17DFC3361DF60C0A00BA6E69 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		17F42A321DF6277C00F89314 /* ManagedObjectContextSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObjectContextSettable.swift; sourceTree = "<group>"; };
+		17F42A341DF6279B00F89314 /* SyncCoordinatorSettable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncCoordinatorSettable.swift; sourceTree = "<group>"; };
+		17F42A391DF62A9E00F89314 /* ChangeProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeProcessor.swift; sourceTree = "<group>"; };
+		17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDownloader.swift; sourceTree = "<group>"; };
+		17F42A3E1DF6304A00F89314 /* SyncCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncCoordinator.swift; sourceTree = "<group>"; };
+		17F42A401DF633F300F89314 /* ProductsDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductsDownloader.swift; sourceTree = "<group>"; };
 		1C163E0FA10B66959C56174C /* Pods-ClothesStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore.release.xcconfig"; sourceTree = "<group>"; };
 		2168523C9C9E6451FE59A9A9 /* Pods_ClothesStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ClothesStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E9FEB601F88E5A96D6EC1E /* Pods-ClothesStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStoreUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStoreUITests/Pods-ClothesStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,9 +121,9 @@
 		1764E5101DF5F8670026E260 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1764E5131DF5FA7B0026E260 /* Endpoint.swift */,
 				1764E5151DF5FB0F0026E260 /* Endpoints */,
 				1764E5111DF5F9190026E260 /* APIManager.swift */,
-				1764E5131DF5FA7B0026E260 /* Endpoint.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -149,6 +161,8 @@
 		178352E91DF5E9AA006ADAD4 /* ClothesStore */ = {
 			isa = PBXGroup;
 			children = (
+				17F42A361DF6297600F89314 /* Sync */,
+				17F42A311DF6274200F89314 /* DependancyInjectables */,
 				17DFC3351DF60BE100BA6E69 /* Model */,
 				1764E5101DF5F8670026E260 /* Networking */,
 				1783531A1DF5EF2A006ADAD4 /* ViewControllers */,
@@ -196,6 +210,34 @@
 				17DFC3361DF60C0A00BA6E69 /* Product.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		17F42A311DF6274200F89314 /* DependancyInjectables */ = {
+			isa = PBXGroup;
+			children = (
+				17F42A321DF6277C00F89314 /* ManagedObjectContextSettable.swift */,
+				17F42A341DF6279B00F89314 /* SyncCoordinatorSettable.swift */,
+			);
+			name = DependancyInjectables;
+			sourceTree = "<group>";
+		};
+		17F42A361DF6297600F89314 /* Sync */ = {
+			isa = PBXGroup;
+			children = (
+				17F42A3E1DF6304A00F89314 /* SyncCoordinator.swift */,
+				17F42A391DF62A9E00F89314 /* ChangeProcessor.swift */,
+				17F42A3B1DF62AC500F89314 /* ChangeProcessors */,
+			);
+			name = Sync;
+			sourceTree = "<group>";
+		};
+		17F42A3B1DF62AC500F89314 /* ChangeProcessors */ = {
+			isa = PBXGroup;
+			children = (
+				17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */,
+				17F42A401DF633F300F89314 /* ProductsDownloader.swift */,
+			);
+			name = ChangeProcessors;
 			sourceTree = "<group>";
 		};
 		3E9D47D4E9D5B71D16D1082B /* Frameworks */ = {
@@ -510,10 +552,16 @@
 				1783531C1DF5EFCD006ADAD4 /* CartViewController.swift in Sources */,
 				17DFC3371DF60C0A00BA6E69 /* Product.swift in Sources */,
 				178352EF1DF5E9AA006ADAD4 /* WishlistViewController.swift in Sources */,
+				17F42A3D1DF62AD700F89314 /* ProductDownloader.swift in Sources */,
 				1764E5121DF5F9190026E260 /* APIManager.swift in Sources */,
 				1764E5171DF5FB4E0026E260 /* Products.swift in Sources */,
+				17F42A3A1DF62A9E00F89314 /* ChangeProcessor.swift in Sources */,
+				17F42A351DF6279B00F89314 /* SyncCoordinatorSettable.swift in Sources */,
+				17F42A3F1DF6304A00F89314 /* SyncCoordinator.swift in Sources */,
+				17F42A331DF6277C00F89314 /* ManagedObjectContextSettable.swift in Sources */,
 				178352EB1DF5E9AA006ADAD4 /* AppDelegate.swift in Sources */,
 				1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */,
+				17F42A411DF633F300F89314 /* ProductsDownloader.swift in Sources */,
 				178352ED1DF5E9AA006ADAD4 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

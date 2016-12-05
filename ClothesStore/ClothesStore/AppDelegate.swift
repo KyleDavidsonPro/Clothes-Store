@@ -13,10 +13,18 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var managedObjectContext: NSManagedObjectContext!
+    var syncCoordinator: SyncCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         createManagedObjectContext()
+        syncCoordinator = SyncCoordinator(managedObjectContext: managedObjectContext, remote: APIManager())
+        
+        guard let tabBarController = window?.rootViewController as? UITabBarController else {
+            fatalError("Tab bar not found")
+        }
+        
+        resolveDependencies(withTabBarController: tabBarController)
         return true
     }
 
@@ -65,6 +73,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             fatalError("Error migrating store: \(error)")
         }
     }
-
 }
+
+// MARK: - Dependancy Injection
+extension AppDelegate {
+    /**
+     Injects in the correct dependencies to the root view controllers, This handle the case of the root views being in either split views / nav controllers
+     */
+    func resolveDependencies(withTabBarController tabBarController: UITabBarController) {
+        guard let tabBarViewControllers = tabBarController.viewControllers else {
+            fatalError("Root view controller - is not a tab bar controller")
+        }
+        
+        for tabbedRootView in tabBarViewControllers {
+            // Deals with root tabs that are a navigation controller i.e dashboard.
+            if var contextSettableController = tabbedRootView as? ManagedObjectContextSettable {
+                contextSettableController.managedObjectContext = managedObjectContext
+            }
+            
+            if var syncSettableCoordinator = tabbedRootView as? SyncCoordinatorSettable {
+                syncSettableCoordinator.syncCoordinator = syncCoordinator
+            }
+        }
+    }
+}
+
 

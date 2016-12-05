@@ -7,20 +7,20 @@
 //
 
 import UIKit
+import CoreData
+import ObjectMapper
 
-class SearchViewController: UIViewController {
-
+class SearchViewController: UIViewController, ManagedObjectContextSettable, SyncCoordinatorSettable {
+    var managedObjectContext: NSManagedObjectContext!
+    var syncCoordinator: SyncCoordinator!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        APIManager().request(endpoint: Products.All)
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

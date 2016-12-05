@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class CartViewController: UIViewController {
+class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCoordinatorSettable {
+    var managedObjectContext: NSManagedObjectContext!
+    var syncCoordinator: SyncCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()
