@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import ObjectMapper
+import SwiftyJSON
 
 struct APIManager {
     private let baseUrl = "https://private-anon-6d5dafff99-ddshop.apiary-mock.com"
@@ -32,12 +34,12 @@ struct APIManager {
     }
     
     /// make request to a given endpoint
-    func request(endpoint: Endpoint) {
+    func request(endpoint: Endpoint, completion: @escaping (JSON) -> Void) {
         if let request = buildRequest(for: endpoint) {
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                if let response = response, let data = data {
-                    print(response)
-                    print(String(data: data, encoding: .utf8))
+                if let data = data {
+                    let json = JSON(data: data)
+                    completion(json)
                 } else {
                     print(error)
                 }

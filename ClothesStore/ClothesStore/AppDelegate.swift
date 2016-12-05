@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
-
+    var managedObjectContext: NSManagedObjectContext!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        createManagedObjectContext()
         return true
     }
 
@@ -40,7 +41,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    func createManagedObjectContext() {
+        guard let modelUrl = Bundle.main.url(forResource: "ClothesStore", withExtension: "momd") else {
+            fatalError("Error loading model from bundle")
+        }
+        
+        guard let model = NSManagedObjectModel(contentsOf: modelUrl) else {
+            fatalError("Error initializing mom from \(modelUrl)")
+        }
+        
+        let psc = NSPersistentStoreCoordinator(managedObjectModel: model)
+        managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        managedObjectContext.persistentStoreCoordinator = psc
+        
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docUrl = urls.last
+        let storeUrl = docUrl?.appendingPathComponent("ClothesStore.sqlite")
+        
+        do {
+            try psc.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeUrl, options: nil)
+        } catch {
+            fatalError("Error migrating store: \(error)")
+        }
+    }
 
 }
 

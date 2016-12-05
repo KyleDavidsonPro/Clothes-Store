@@ -21,7 +21,12 @@ enum Products {
 /// Products Endpoint Implementation
 extension Products: Endpoint {
     var url: String {
-        return "/products"
+        switch self {
+        case .All:
+            return "/products"
+        case .Get(let id):
+            return "/products/" + id
+        }
     }
     
     var method: String {

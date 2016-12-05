@@ -4,6 +4,7 @@ use_frameworks!
 target 'ClothesStore' do
   # Pods for ClothesStore
   pod 'ObjectMapper', '~> 2.2'
+  pod 'SwiftyJSON'
 
   target 'ClothesStoreTests' do
     inherit! :search_paths
