@@ -1,0 +1,928 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B27203E9B160A390F5E17796DE86932 /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A35D0B5A3574893A258DF1BCAA75F8EB /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12EF25578B49A115595FDFCCF1B4EDD0 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392F30E77ACEF773574481788FC164CE /* ISO8601DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		165EA39FB7C878679764D5EBFEB5C092 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		191223246695B518ECCF7206E518725B /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = A933395E455F8BF19A8E5F3962F344DF /* URLTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		250BACC429DD19E9D523CC55E4F55158 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2868717245A49E3E130B53CC1BE7C123 /* EnumOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E23AA6A3044DC116EB9672E4C41E9BC /* EnumOperators.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		314B9E9F909985AD40B416A0CE4D8F51 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F906223EDFF143D8FC85E7BDD33990E9 /* DateFormatterTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3168742F7D72DF80FA485C69BA3B9D90 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E57A1A15BA8E0CA5333E387DA53050 /* Mappable.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		42F182CCC2C8B7521C2ABBD5D61B8F67 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DC0DF39D000B5F3B8CBB508300E9EA /* TransformOf.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4421476F7F26886F96E830C664C39FA3 /* ImmutableMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A6F4199F9DACDB4F130E78984C177B /* ImmutableMappable.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		45CA1F8F65C0E30B5402A998E15DEBB6 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127EE13AFBF3AA14172CBE0D8BCDF5E7 /* EnumTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C86D4E914CE708EDEC9B00D9E32770C /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF71DAD642E10BDF1FE8BC808AAB724 /* Map.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C8E3610E9DEE3F3EF326AEE6C104DB5 /* MapError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3A77ECEA5DA5F05866307CB09D6969 /* MapError.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4FDEABA45359B146DF34457AFD40CB35 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE823BFD51BCAFB8DFE9E3FB75FFC83D /* DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		55BE8395611E463380EDDCBE3E10D81E /* Pods-ClothesStoreUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 780A8EAE5052089AD0ED307C7AC4741A /* Pods-ClothesStoreUITests-dummy.m */; };
+		7183AD43047C455B682A4020359C2A5E /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C3F859C052F03AE473FDD08E9D3FA4 /* CustomDateFormatTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7F1E9E1E1B49552F24FB32C65B9FEB7A /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF89DE8C0F20ED983508FB20E08E640C /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9663A29E978A80886C5FA9865AEB220C /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F81C79A855F1B8B829D010AFC9A955 /* NSDecimalNumberTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9903F0644C7776404FC453E5B97959BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		9D75E36D681ADFF5021D498AC35FD71F /* Pods-ClothesStoreTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CC90B4FE45C7DF0F7181B3711541B84 /* Pods-ClothesStoreTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5014B98E0B339947198C6803DE634E8 /* DictionaryTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06CDAEF9D7972CD688E81E8481C5DD6 /* DictionaryTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A6C2F066D75588425CC85D20985C2EE2 /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C0D11E539ED078EF3E964B47993DE5 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A83C9438D9D5695F8E18FB652CA9F168 /* HexColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2FEFCCEC489E1F7D5AC152045E9E0C /* HexColorTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA2DAD7007208B07B5A342E60CF9948C /* Pods-ClothesStore-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DCA3327C1986998116C542396962AE7 /* Pods-ClothesStore-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3F322D2C4B88A3EE24DA8797D1F3189 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A84F096F8DE4FCC318A170848E587458 /* ObjectMapper-dummy.m */; };
+		B4ED3F9C4224544604B462FDF726E844 /* Pods-ClothesStoreUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A5C7E8FB903DA4C57D042BC72B74E3 /* Pods-ClothesStoreUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7FBE7EBD878C9A6861E1B77CB1151D2 /* Pods-ClothesStoreTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF2132DF0130F91D37D72C6D8A44DF9 /* Pods-ClothesStoreTests-dummy.m */; };
+		DC1F12C360F2419DB390C24A7AC772D4 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B153040E6D5A76EA5EFC54804596EB0 /* FromJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		E9D0A1BD282C3D6E46D284644A676921 /* DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACD9773024FB0574015729F915B363E /* DataTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EC28AC2AFA1594C60F90B6080DA2DE36 /* Pods-ClothesStore-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF2E785778FBB0B576D8CF42E34D35BB /* Pods-ClothesStore-dummy.m */; };
+		EE3A19C18674237A97F15FE09BE71EA3 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA1163C8F70C54C02E67C6F3F128696 /* Mapper.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F6EC7E4B2FA0CEF7F9A36AC4444B71DB /* TransformOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F53A95590265CC86F9FA955B8D1F76B /* TransformOperators.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDA18FC6BABCD09847A77407373A8546 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		FEEF32367907C0D129AD9DE56F6932D5 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98919806147777380B9BDA6DD0FFB /* Operators.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37A01B0BDEF85ECC08613F2D0287C468 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B43918AB915242B851ABEFB5D70BE0AD;
+			remoteInfo = ObjectMapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		043889A915797D61FFB3E9FB07297EC9 /* Pods-ClothesStoreUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ClothesStoreUITests.modulemap"; sourceTree = "<group>"; };
+		053A187E1654FE603986A760C9FB37BE /* Pods_ClothesStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClothesStore.framework; path = "Pods-ClothesStore.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08983CE378C820EDD6BA7F4F7C27E846 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		127EE13AFBF3AA14172CBE0D8BCDF5E7 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Sources/EnumTransform.swift; sourceTree = "<group>"; };
+		13F3DB489E9E4F3972D28ED2E3D077FE /* Pods-ClothesStoreTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClothesStoreTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		170E989295FA6420F7B0A18A46B13565 /* Pods-ClothesStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		1B153040E6D5A76EA5EFC54804596EB0 /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = Sources/FromJSON.swift; sourceTree = "<group>"; };
+		1F6FED9E655CAC5F9CA3954461768B6D /* Pods-ClothesStoreUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStoreUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1F82F90127D0A38443C08376A5A86936 /* Pods-ClothesStoreTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClothesStoreTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		23F81C79A855F1B8B829D010AFC9A955 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Sources/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
+		23FE61514C8116E156B3DD1B1DB1FF01 /* Pods-ClothesStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		24BA0114098B296EAC3695FDCF373D87 /* Pods-ClothesStoreUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStoreUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C3A77ECEA5DA5F05866307CB09D6969 /* MapError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MapError.swift; path = Sources/MapError.swift; sourceTree = "<group>"; };
+		2E23AA6A3044DC116EB9672E4C41E9BC /* EnumOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumOperators.swift; path = Sources/EnumOperators.swift; sourceTree = "<group>"; };
+		30C3F859C052F03AE473FDD08E9D3FA4 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Sources/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		33D012877FBC9481B60014EE1C197D73 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ObjectMapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		369449776E5B7B4B8D77C9B05E1C37E1 /* Pods-ClothesStore-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClothesStore-acknowledgements.markdown"; sourceTree = "<group>"; };
+		392F30E77ACEF773574481788FC164CE /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Sources/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		3E3B7B5CE894570FE84EBE8882DE1107 /* Pods-ClothesStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStore.debug.xcconfig"; sourceTree = "<group>"; };
+		3F2FEFCCEC489E1F7D5AC152045E9E0C /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Sources/HexColorTransform.swift; sourceTree = "<group>"; };
+		4C31CD26F5391B337187E7DAE7125F47 /* Pods-ClothesStoreTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStoreTests-frameworks.sh"; sourceTree = "<group>"; };
+		4EBB16CB9525C0580906BBDCA4995C1A /* Pods-ClothesStoreTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStoreTests-resources.sh"; sourceTree = "<group>"; };
+		54A5C7E8FB903DA4C57D042BC72B74E3 /* Pods-ClothesStoreUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClothesStoreUITests-umbrella.h"; sourceTree = "<group>"; };
+		579864E54D261EFC78BA8929C79F9832 /* Pods_ClothesStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClothesStoreTests.framework; path = "Pods-ClothesStoreTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59E57A1A15BA8E0CA5333E387DA53050 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = Sources/Mappable.swift; sourceTree = "<group>"; };
+		604BE185AEDE24378C5C258677171DAA /* ObjectMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.xcconfig; sourceTree = "<group>"; };
+		61DC0DF39D000B5F3B8CBB508300E9EA /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Sources/TransformOf.swift; sourceTree = "<group>"; };
+		6242347258A7D5BCB53FCEFD8B4F004C /* Pods-ClothesStoreUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStoreUITests-resources.sh"; sourceTree = "<group>"; };
+		6A0E8D1F682C5BB48C940470598A1726 /* Pods-ClothesStoreUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClothesStoreUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		6F53A95590265CC86F9FA955B8D1F76B /* TransformOperators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOperators.swift; path = Sources/TransformOperators.swift; sourceTree = "<group>"; };
+		76108903E69A2DE0F123D832481768CA /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
+		780A8EAE5052089AD0ED307C7AC4741A /* Pods-ClothesStoreUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClothesStoreUITests-dummy.m"; sourceTree = "<group>"; };
+		7CC90B4FE45C7DF0F7181B3711541B84 /* Pods-ClothesStoreTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClothesStoreTests-umbrella.h"; sourceTree = "<group>"; };
+		86EEA81F6AB73AE88B4D45AD869B3DA0 /* Pods-ClothesStore-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ClothesStore-acknowledgements.plist"; sourceTree = "<group>"; };
+		87CC54410CA34B661FE68534881ADB86 /* Pods-ClothesStoreUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ClothesStoreUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		950878FCE6FEDE27EE935BFAE11C7F85 /* Pods-ClothesStoreTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ClothesStoreTests.modulemap"; sourceTree = "<group>"; };
+		9DCA3327C1986998116C542396962AE7 /* Pods-ClothesStore-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ClothesStore-umbrella.h"; sourceTree = "<group>"; };
+		9EA1163C8F70C54C02E67C6F3F128696 /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = Sources/Mapper.swift; sourceTree = "<group>"; };
+		A30F01868E249DB4C94BF1C5935A6ADD /* Pods-ClothesStore-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStore-frameworks.sh"; sourceTree = "<group>"; };
+		A35D0B5A3574893A258DF1BCAA75F8EB /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
+		A37D49FA37BE7480E62ABDFE899E47D4 /* Pods-ClothesStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ClothesStore.release.xcconfig"; sourceTree = "<group>"; };
+		A84F096F8DE4FCC318A170848E587458 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
+		A933395E455F8BF19A8E5F3962F344DF /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Sources/URLTransform.swift; sourceTree = "<group>"; };
+		BF2E785778FBB0B576D8CF42E34D35BB /* Pods-ClothesStore-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClothesStore-dummy.m"; sourceTree = "<group>"; };
+		C5433B14A726C25D87462624AABAF2BB /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		C6C0D11E539ED078EF3E964B47993DE5 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Sources/TransformType.swift; sourceTree = "<group>"; };
+		C8D40BA3EC26063C0D8776BD7E03DD60 /* Pods_ClothesStoreUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ClothesStoreUITests.framework; path = "Pods-ClothesStoreUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CE823BFD51BCAFB8DFE9E3FB75FFC83D /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = Sources/DateTransform.swift; sourceTree = "<group>"; };
+		CF89DE8C0F20ED983508FB20E08E640C /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = Sources/ToJSON.swift; sourceTree = "<group>"; };
+		D1A6F4199F9DACDB4F130E78984C177B /* ImmutableMappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImmutableMappable.swift; path = Sources/ImmutableMappable.swift; sourceTree = "<group>"; };
+		D454341A156060FE2D323C269722DC79 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8AFCB62974B36F8147DA50DBCDA5AE4 /* Pods-ClothesStore-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStore-resources.sh"; sourceTree = "<group>"; };
+		DACD9773024FB0574015729F915B363E /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Sources/DataTransform.swift; sourceTree = "<group>"; };
+		DE75D8616AD08DBDC7B844DA646F9853 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED98919806147777380B9BDA6DD0FFB /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/Operators.swift; sourceTree = "<group>"; };
+		EAF2132DF0130F91D37D72C6D8A44DF9 /* Pods-ClothesStoreTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ClothesStoreTests-dummy.m"; sourceTree = "<group>"; };
+		ECF71DAD642E10BDF1FE8BC808AAB724 /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = Sources/Map.swift; sourceTree = "<group>"; };
+		ED526950075EBC4F4BEF7BBB6D146D6D /* Pods-ClothesStore.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ClothesStore.modulemap"; sourceTree = "<group>"; };
+		F06CDAEF9D7972CD688E81E8481C5DD6 /* DictionaryTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DictionaryTransform.swift; path = Sources/DictionaryTransform.swift; sourceTree = "<group>"; };
+		F906223EDFF143D8FC85E7BDD33990E9 /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Sources/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		F9742C82691F99C4A4D781736CC03423 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB203747CBBC1F7AA3B9A835B38657CD /* Pods-ClothesStoreUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ClothesStoreUITests-frameworks.sh"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10BACD1FDD4B7CE90C8544F05E10CC62 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDA18FC6BABCD09847A77407373A8546 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D2DAD82E0793C89C6A9ED6915A80560 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165EA39FB7C878679764D5EBFEB5C092 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B6978E37089917CDA587B9AA071EA425 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				250BACC429DD19E9D523CC55E4F55158 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7917F6F5C07758566D4971BB78BC72B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9903F0644C7776404FC453E5B97959BF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0B2A6F332721134D42CFB868E405083C /* Pods-ClothesStoreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D454341A156060FE2D323C269722DC79 /* Info.plist */,
+				043889A915797D61FFB3E9FB07297EC9 /* Pods-ClothesStoreUITests.modulemap */,
+				87CC54410CA34B661FE68534881ADB86 /* Pods-ClothesStoreUITests-acknowledgements.markdown */,
+				6A0E8D1F682C5BB48C940470598A1726 /* Pods-ClothesStoreUITests-acknowledgements.plist */,
+				780A8EAE5052089AD0ED307C7AC4741A /* Pods-ClothesStoreUITests-dummy.m */,
+				FB203747CBBC1F7AA3B9A835B38657CD /* Pods-ClothesStoreUITests-frameworks.sh */,
+				6242347258A7D5BCB53FCEFD8B4F004C /* Pods-ClothesStoreUITests-resources.sh */,
+				54A5C7E8FB903DA4C57D042BC72B74E3 /* Pods-ClothesStoreUITests-umbrella.h */,
+				24BA0114098B296EAC3695FDCF373D87 /* Pods-ClothesStoreUITests.debug.xcconfig */,
+				1F6FED9E655CAC5F9CA3954461768B6D /* Pods-ClothesStoreUITests.release.xcconfig */,
+			);
+			name = "Pods-ClothesStoreUITests";
+			path = "Target Support Files/Pods-ClothesStoreUITests";
+			sourceTree = "<group>";
+		};
+		294124637B69901CADC7692C4D2A8C67 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				30C3F859C052F03AE473FDD08E9D3FA4 /* CustomDateFormatTransform.swift */,
+				DACD9773024FB0574015729F915B363E /* DataTransform.swift */,
+				F906223EDFF143D8FC85E7BDD33990E9 /* DateFormatterTransform.swift */,
+				CE823BFD51BCAFB8DFE9E3FB75FFC83D /* DateTransform.swift */,
+				F06CDAEF9D7972CD688E81E8481C5DD6 /* DictionaryTransform.swift */,
+				2E23AA6A3044DC116EB9672E4C41E9BC /* EnumOperators.swift */,
+				127EE13AFBF3AA14172CBE0D8BCDF5E7 /* EnumTransform.swift */,
+				1B153040E6D5A76EA5EFC54804596EB0 /* FromJSON.swift */,
+				3F2FEFCCEC489E1F7D5AC152045E9E0C /* HexColorTransform.swift */,
+				D1A6F4199F9DACDB4F130E78984C177B /* ImmutableMappable.swift */,
+				392F30E77ACEF773574481788FC164CE /* ISO8601DateTransform.swift */,
+				ECF71DAD642E10BDF1FE8BC808AAB724 /* Map.swift */,
+				2C3A77ECEA5DA5F05866307CB09D6969 /* MapError.swift */,
+				59E57A1A15BA8E0CA5333E387DA53050 /* Mappable.swift */,
+				9EA1163C8F70C54C02E67C6F3F128696 /* Mapper.swift */,
+				23F81C79A855F1B8B829D010AFC9A955 /* NSDecimalNumberTransform.swift */,
+				DED98919806147777380B9BDA6DD0FFB /* Operators.swift */,
+				CF89DE8C0F20ED983508FB20E08E640C /* ToJSON.swift */,
+				61DC0DF39D000B5F3B8CBB508300E9EA /* TransformOf.swift */,
+				6F53A95590265CC86F9FA955B8D1F76B /* TransformOperators.swift */,
+				C6C0D11E539ED078EF3E964B47993DE5 /* TransformType.swift */,
+				A933395E455F8BF19A8E5F3962F344DF /* URLTransform.swift */,
+				31B42CAFB03FBF00E921A113B1389032 /* Support Files */,
+			);
+			name = ObjectMapper;
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		31B42CAFB03FBF00E921A113B1389032 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9742C82691F99C4A4D781736CC03423 /* Info.plist */,
+				C5433B14A726C25D87462624AABAF2BB /* ObjectMapper.modulemap */,
+				604BE185AEDE24378C5C258677171DAA /* ObjectMapper.xcconfig */,
+				A84F096F8DE4FCC318A170848E587458 /* ObjectMapper-dummy.m */,
+				76108903E69A2DE0F123D832481768CA /* ObjectMapper-prefix.pch */,
+				A35D0B5A3574893A258DF1BCAA75F8EB /* ObjectMapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjectMapper";
+			sourceTree = "<group>";
+		};
+		55B067596C888AA7DDDA68BF94C373B2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				294124637B69901CADC7692C4D2A8C67 /* ObjectMapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6CFBBB43836EE74F02FBF8992452491D /* Pods-ClothesStore */ = {
+			isa = PBXGroup;
+			children = (
+				DE75D8616AD08DBDC7B844DA646F9853 /* Info.plist */,
+				ED526950075EBC4F4BEF7BBB6D146D6D /* Pods-ClothesStore.modulemap */,
+				369449776E5B7B4B8D77C9B05E1C37E1 /* Pods-ClothesStore-acknowledgements.markdown */,
+				86EEA81F6AB73AE88B4D45AD869B3DA0 /* Pods-ClothesStore-acknowledgements.plist */,
+				BF2E785778FBB0B576D8CF42E34D35BB /* Pods-ClothesStore-dummy.m */,
+				A30F01868E249DB4C94BF1C5935A6ADD /* Pods-ClothesStore-frameworks.sh */,
+				D8AFCB62974B36F8147DA50DBCDA5AE4 /* Pods-ClothesStore-resources.sh */,
+				9DCA3327C1986998116C542396962AE7 /* Pods-ClothesStore-umbrella.h */,
+				3E3B7B5CE894570FE84EBE8882DE1107 /* Pods-ClothesStore.debug.xcconfig */,
+				A37D49FA37BE7480E62ABDFE899E47D4 /* Pods-ClothesStore.release.xcconfig */,
+			);
+			name = "Pods-ClothesStore";
+			path = "Target Support Files/Pods-ClothesStore";
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				55B067596C888AA7DDDA68BF94C373B2 /* Pods */,
+				C9526E5C4DC74683783E58B4883609F7 /* Products */,
+				8825B1D9C75CA725E59825E817863E50 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FB1C250BBB2F7226EA7125C6B5FFA7B /* Pods-ClothesStoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				08983CE378C820EDD6BA7F4F7C27E846 /* Info.plist */,
+				950878FCE6FEDE27EE935BFAE11C7F85 /* Pods-ClothesStoreTests.modulemap */,
+				1F82F90127D0A38443C08376A5A86936 /* Pods-ClothesStoreTests-acknowledgements.markdown */,
+				13F3DB489E9E4F3972D28ED2E3D077FE /* Pods-ClothesStoreTests-acknowledgements.plist */,
+				EAF2132DF0130F91D37D72C6D8A44DF9 /* Pods-ClothesStoreTests-dummy.m */,
+				4C31CD26F5391B337187E7DAE7125F47 /* Pods-ClothesStoreTests-frameworks.sh */,
+				4EBB16CB9525C0580906BBDCA4995C1A /* Pods-ClothesStoreTests-resources.sh */,
+				7CC90B4FE45C7DF0F7181B3711541B84 /* Pods-ClothesStoreTests-umbrella.h */,
+				23FE61514C8116E156B3DD1B1DB1FF01 /* Pods-ClothesStoreTests.debug.xcconfig */,
+				170E989295FA6420F7B0A18A46B13565 /* Pods-ClothesStoreTests.release.xcconfig */,
+			);
+			name = "Pods-ClothesStoreTests";
+			path = "Target Support Files/Pods-ClothesStoreTests";
+			sourceTree = "<group>";
+		};
+		8825B1D9C75CA725E59825E817863E50 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6CFBBB43836EE74F02FBF8992452491D /* Pods-ClothesStore */,
+				7FB1C250BBB2F7226EA7125C6B5FFA7B /* Pods-ClothesStoreTests */,
+				0B2A6F332721134D42CFB868E405083C /* Pods-ClothesStoreUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9526E5C4DC74683783E58B4883609F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33D012877FBC9481B60014EE1C197D73 /* ObjectMapper.framework */,
+				053A187E1654FE603986A760C9FB37BE /* Pods_ClothesStore.framework */,
+				579864E54D261EFC78BA8929C79F9832 /* Pods_ClothesStoreTests.framework */,
+				C8D40BA3EC26063C0D8776BD7E03DD60 /* Pods_ClothesStoreUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		09A2B9B0473999C8BD87CAE63F39CEF3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D75E36D681ADFF5021D498AC35FD71F /* Pods-ClothesStoreTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFD10530B8964915283E0344FC75F4D4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2DAD7007208B07B5A342E60CF9948C /* Pods-ClothesStore-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3BFA283BF3122E163C4489C254D9862 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B27203E9B160A390F5E17796DE86932 /* ObjectMapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB57701ECE8B8BD2EA494FDF822CBE2C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4ED3F9C4224544604B462FDF726E844 /* Pods-ClothesStoreUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		31085AAF3948CE15503B5BACF3EEE738 /* Pods-ClothesStoreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4994B9C0412F9515A19F0BF53A626206 /* Build configuration list for PBXNativeTarget "Pods-ClothesStoreUITests" */;
+			buildPhases = (
+				05C46893422FC4C2FAD9E407E3134CD5 /* Sources */,
+				10BACD1FDD4B7CE90C8544F05E10CC62 /* Frameworks */,
+				FB57701ECE8B8BD2EA494FDF822CBE2C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ClothesStoreUITests";
+			productName = "Pods-ClothesStoreUITests";
+			productReference = C8D40BA3EC26063C0D8776BD7E03DD60 /* Pods_ClothesStoreUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9223E614F71DD77B28624EFCAFE8D150 /* Pods-ClothesStore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 956FEBAA38AADD1124B0A5E9E3BD43BF /* Build configuration list for PBXNativeTarget "Pods-ClothesStore" */;
+			buildPhases = (
+				91944A2F821679200110FAC9D505FDE7 /* Sources */,
+				F7917F6F5C07758566D4971BB78BC72B /* Frameworks */,
+				AFD10530B8964915283E0344FC75F4D4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DF0F2FB2E48D9DA5506725187681FF3C /* PBXTargetDependency */,
+			);
+			name = "Pods-ClothesStore";
+			productName = "Pods-ClothesStore";
+			productReference = 053A187E1654FE603986A760C9FB37BE /* Pods_ClothesStore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B43918AB915242B851ABEFB5D70BE0AD /* ObjectMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F89BCF8F71331FFD619BCBAFFC87F2A4 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
+			buildPhases = (
+				BD107137834CD6974D07FBBE5DACD957 /* Sources */,
+				B6978E37089917CDA587B9AA071EA425 /* Frameworks */,
+				F3BFA283BF3122E163C4489C254D9862 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectMapper;
+			productName = ObjectMapper;
+			productReference = 33D012877FBC9481B60014EE1C197D73 /* ObjectMapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F033BF60E89758724FB316D88E4049B2 /* Pods-ClothesStoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0AC7B203C566972693590467A42D2EB4 /* Build configuration list for PBXNativeTarget "Pods-ClothesStoreTests" */;
+			buildPhases = (
+				76839F0A01F669BE0F53B65F873FEC66 /* Sources */,
+				5D2DAD82E0793C89C6A9ED6915A80560 /* Frameworks */,
+				09A2B9B0473999C8BD87CAE63F39CEF3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ClothesStoreTests";
+			productName = "Pods-ClothesStoreTests";
+			productReference = 579864E54D261EFC78BA8929C79F9832 /* Pods_ClothesStoreTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C9526E5C4DC74683783E58B4883609F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B43918AB915242B851ABEFB5D70BE0AD /* ObjectMapper */,
+				9223E614F71DD77B28624EFCAFE8D150 /* Pods-ClothesStore */,
+				F033BF60E89758724FB316D88E4049B2 /* Pods-ClothesStoreTests */,
+				31085AAF3948CE15503B5BACF3EEE738 /* Pods-ClothesStoreUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05C46893422FC4C2FAD9E407E3134CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BE8395611E463380EDDCBE3E10D81E /* Pods-ClothesStoreUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76839F0A01F669BE0F53B65F873FEC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7FBE7EBD878C9A6861E1B77CB1151D2 /* Pods-ClothesStoreTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91944A2F821679200110FAC9D505FDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC28AC2AFA1594C60F90B6080DA2DE36 /* Pods-ClothesStore-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD107137834CD6974D07FBBE5DACD957 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7183AD43047C455B682A4020359C2A5E /* CustomDateFormatTransform.swift in Sources */,
+				E9D0A1BD282C3D6E46D284644A676921 /* DataTransform.swift in Sources */,
+				314B9E9F909985AD40B416A0CE4D8F51 /* DateFormatterTransform.swift in Sources */,
+				4FDEABA45359B146DF34457AFD40CB35 /* DateTransform.swift in Sources */,
+				A5014B98E0B339947198C6803DE634E8 /* DictionaryTransform.swift in Sources */,
+				2868717245A49E3E130B53CC1BE7C123 /* EnumOperators.swift in Sources */,
+				45CA1F8F65C0E30B5402A998E15DEBB6 /* EnumTransform.swift in Sources */,
+				DC1F12C360F2419DB390C24A7AC772D4 /* FromJSON.swift in Sources */,
+				A83C9438D9D5695F8E18FB652CA9F168 /* HexColorTransform.swift in Sources */,
+				4421476F7F26886F96E830C664C39FA3 /* ImmutableMappable.swift in Sources */,
+				12EF25578B49A115595FDFCCF1B4EDD0 /* ISO8601DateTransform.swift in Sources */,
+				4C86D4E914CE708EDEC9B00D9E32770C /* Map.swift in Sources */,
+				4C8E3610E9DEE3F3EF326AEE6C104DB5 /* MapError.swift in Sources */,
+				3168742F7D72DF80FA485C69BA3B9D90 /* Mappable.swift in Sources */,
+				EE3A19C18674237A97F15FE09BE71EA3 /* Mapper.swift in Sources */,
+				9663A29E978A80886C5FA9865AEB220C /* NSDecimalNumberTransform.swift in Sources */,
+				B3F322D2C4B88A3EE24DA8797D1F3189 /* ObjectMapper-dummy.m in Sources */,
+				FEEF32367907C0D129AD9DE56F6932D5 /* Operators.swift in Sources */,
+				7F1E9E1E1B49552F24FB32C65B9FEB7A /* ToJSON.swift in Sources */,
+				42F182CCC2C8B7521C2ABBD5D61B8F67 /* TransformOf.swift in Sources */,
+				F6EC7E4B2FA0CEF7F9A36AC4444B71DB /* TransformOperators.swift in Sources */,
+				A6C2F066D75588425CC85D20985C2EE2 /* TransformType.swift in Sources */,
+				191223246695B518ECCF7206E518725B /* URLTransform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DF0F2FB2E48D9DA5506725187681FF3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = B43918AB915242B851ABEFB5D70BE0AD /* ObjectMapper */;
+			targetProxy = 37A01B0BDEF85ECC08613F2D0287C468 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		015A368F878AC3E2CEAE21DDE8026304 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0CD2BEBB4D5DBC1563FFEB93C15ED452 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A37D49FA37BE7480E62ABDFE899E47D4 /* Pods-ClothesStore.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStore/Pods-ClothesStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		183BE5F6394540FFBDF4D1F1CE4C1733 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E3B7B5CE894570FE84EBE8882DE1107 /* Pods-ClothesStore.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStore/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStore/Pods-ClothesStore.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStore;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1BA4DE1CECFB1192BE2C806841ADE1A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 170E989295FA6420F7B0A18A46B13565 /* Pods-ClothesStoreTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStoreTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStoreTests/Pods-ClothesStoreTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStoreTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3F145B11D2FF864ADF033CB40427D12C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604BE185AEDE24378C5C258677171DAA /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		44CDBB6D11DE06DB64D6268622BDC47E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D9275FE5772B711B816302DAB1B127F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F6FED9E655CAC5F9CA3954461768B6D /* Pods-ClothesStoreUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStoreUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStoreUITests/Pods-ClothesStoreUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStoreUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6DDF76F86416B6FA668811C621344B23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23FE61514C8116E156B3DD1B1DB1FF01 /* Pods-ClothesStoreTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStoreTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStoreTests/Pods-ClothesStoreTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStoreTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		99FCB7E8B26EB185BF4C5C19F33748E7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604BE185AEDE24378C5C258677171DAA /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F487FB3B31FDA597D344679E48BC34C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24BA0114098B296EAC3695FDCF373D87 /* Pods-ClothesStoreUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ClothesStoreUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ClothesStoreUITests/Pods-ClothesStoreUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ClothesStoreUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0AC7B203C566972693590467A42D2EB4 /* Build configuration list for PBXNativeTarget "Pods-ClothesStoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDF76F86416B6FA668811C621344B23 /* Debug */,
+				1BA4DE1CECFB1192BE2C806841ADE1A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				015A368F878AC3E2CEAE21DDE8026304 /* Debug */,
+				44CDBB6D11DE06DB64D6268622BDC47E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4994B9C0412F9515A19F0BF53A626206 /* Build configuration list for PBXNativeTarget "Pods-ClothesStoreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F487FB3B31FDA597D344679E48BC34C9 /* Debug */,
+				4D9275FE5772B711B816302DAB1B127F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		956FEBAA38AADD1124B0A5E9E3BD43BF /* Build configuration list for PBXNativeTarget "Pods-ClothesStore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183BE5F6394540FFBDF4D1F1CE4C1733 /* Debug */,
+				0CD2BEBB4D5DBC1563FFEB93C15ED452 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F89BCF8F71331FFD619BCBAFFC87F2A4 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F145B11D2FF864ADF033CB40427D12C /* Debug */,
+				99FCB7E8B26EB185BF4C5C19F33748E7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
