@@ -12,6 +12,7 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        APIManager().request(endpoint: Products.All)
         // Do any additional setup after loading the view, typically from a nib.
     }
 

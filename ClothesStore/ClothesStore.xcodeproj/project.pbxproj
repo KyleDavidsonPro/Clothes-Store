@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1764E5121DF5F9190026E260 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5111DF5F9190026E260 /* APIManager.swift */; };
+		1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5131DF5FA7B0026E260 /* Endpoint.swift */; };
+		1764E5171DF5FB4E0026E260 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5161DF5FB4E0026E260 /* Products.swift */; };
 		178352EB1DF5E9AA006ADAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */; };
 		178352ED1DF5E9AA006ADAD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */; };
 		178352EF1DF5E9AA006ADAD4 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EE1DF5E9AA006ADAD4 /* WishlistViewController.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1764E5111DF5F9190026E260 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		1764E5131DF5FA7B0026E260 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		1764E5161DF5FB4E0026E260 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		178352E71DF5E9AA006ADAD4 /* ClothesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClothesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1764E5101DF5F8670026E260 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1764E5151DF5FB0F0026E260 /* Endpoints */,
+				1764E5111DF5F9190026E260 /* APIManager.swift */,
+				1764E5131DF5FA7B0026E260 /* Endpoint.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		1764E5151DF5FB0F0026E260 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				1764E5161DF5FB4E0026E260 /* Products.swift */,
+			);
+			name = Endpoints;
+			sourceTree = "<group>";
+		};
 		178352DE1DF5E9AA006ADAD4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +125,7 @@
 		178352E91DF5E9AA006ADAD4 /* ClothesStore */ = {
 			isa = PBXGroup;
 			children = (
+				1764E5101DF5F8670026E260 /* Networking */,
 				1783531A1DF5EF2A006ADAD4 /* ViewControllers */,
 				178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */,
 				178352F01DF5E9AA006ADAD4 /* Main.storyboard */,
@@ -278,7 +303,10 @@
 			files = (
 				1783531C1DF5EFCD006ADAD4 /* CartViewController.swift in Sources */,
 				178352EF1DF5E9AA006ADAD4 /* WishlistViewController.swift in Sources */,
+				1764E5121DF5F9190026E260 /* APIManager.swift in Sources */,
+				1764E5171DF5FB4E0026E260 /* Products.swift in Sources */,
 				178352EB1DF5E9AA006ADAD4 /* AppDelegate.swift in Sources */,
+				1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */,
 				178352ED1DF5E9AA006ADAD4 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -418,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -530,6 +558,7 @@
 				178353131DF5E9AA006ADAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		178353141DF5E9AA006ADAD4 /* Build configuration list for PBXNativeTarget "ClothesStoreTests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +567,7 @@
 				178353161DF5E9AA006ADAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		178353171DF5E9AA006ADAD4 /* Build configuration list for PBXNativeTarget "ClothesStoreUITests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +576,7 @@
 				178353191DF5E9AA006ADAD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
