@@ -12,12 +12,32 @@ import ObjectMapper
 
 /// ChangeProcessor for downloading specific downloader with ID
 class CartUploader: ChangeProcessor {
-    var cart: Cart
+    var product: Product
     
-    init(cart: Cart) {
-        self.cart = cart
+    init(product: Product) {
+        self.product = product
     }
     
     func fetchRemoteRecords(forContext context: SyncCoordinatorContext) {
+        context.remote.request(endpoint: ShoppingCart.add(product)) { (jsonData) in
+            guard let productDict = jsonData.dictionaryObject,
+                let _ = productDict["productId"] as? NSNumber else {
+                    return
+            }
+            
+            // Connect the product and shopping cart locally
+            let cartPredicate = NSPredicate(format: "%K == 1", Cart.Keys.id.rawValue)
+            
+            // Associate the product to the shopping cart
+            if let shoppingCart = Cart.findOrFetchInContext(context.moc, matchingPredicate: cartPredicate) {
+                self.product.cart = shoppingCart
+            }
+            
+            do {
+                try context.moc.save()
+            } catch {
+                print("Failure to save \(error)")
+            }
+        }
     }
 }

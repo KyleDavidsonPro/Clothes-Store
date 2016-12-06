@@ -33,12 +33,16 @@ class DependancyInjectionTests: XCTestCase {
     
     func testManagedObjectContextSettableInjection() {
         for viewController in tabBarViewControllers {
+            if var mocSettable = (viewController as? UINavigationController)?.topViewController as? ManagedObjectContextSettable {
+                mocSettable.managedObjectContext = NSManagedObjectContext()
+            }
+
             if var mocSettable = viewController as? ManagedObjectContextSettable {
                 mocSettable.managedObjectContext = NSManagedObjectContext()
             }
         }
         
-        guard let searchVC = tabBarViewControllers.first as? SearchViewController,
+        guard let searchVC = (tabBarViewControllers.first as? UINavigationController)?.topViewController as? SearchViewController,
             let cartVC = tabBarViewControllers.last as? CartViewController else {
             XCTFail("Unexpected view controller for first tab")
             return
@@ -52,12 +56,16 @@ class DependancyInjectionTests: XCTestCase {
         let mockCoordinator = SyncCoordinator(managedObjectContext: NSManagedObjectContext(), remote: APIManager())
         
         for viewController in tabBarViewControllers {
-            if var mocSettable = viewController as? SyncCoordinatorSettable {
-                mocSettable.syncCoordinator = mockCoordinator
+            if var syncSettable = (viewController as? UINavigationController)?.topViewController as? SyncCoordinatorSettable {
+                syncSettable.syncCoordinator = mockCoordinator
+            }
+            
+            if var syncSettable = viewController as? SyncCoordinatorSettable {
+                syncSettable.syncCoordinator = mockCoordinator
             }
         }
         
-        guard let searchVC = tabBarViewControllers.first as? SearchViewController,
+        guard let searchVC = (tabBarViewControllers.first as? UINavigationController)?.topViewController as? SearchViewController,
             let cartVC = tabBarViewControllers.last as? CartViewController else {
                 XCTFail("Unexpected view controller for first tab")
                 return

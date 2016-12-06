@@ -72,6 +72,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } catch {
             fatalError("Error migrating store: \(error)")
         }
+        
+        //Create one record for local shopping cart if we need to
+        let cartPredicate = NSPredicate(format: "%K == 1", Cart.Keys.id.rawValue)
+        guard let _ = Cart.findOrFetchInContext(managedObjectContext, matchingPredicate: cartPredicate) else {
+            let localShoppingCart = NSEntityDescription.insertNewObject(forEntityName: "Cart", into: managedObjectContext) as! Cart
+            localShoppingCart.id = 1
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                print("Failure to save \(error)")
+            }
+            
+            return
+        }
     }
 }
 
@@ -86,7 +101,16 @@ extension AppDelegate {
         }
         
         for tabbedRootView in tabBarViewControllers {
-            // Deals with root tabs that are a navigation controller i.e dashboard.
+            // Deals with root tabs that are a navigation controller i.e search
+            if var contextSettableController = (tabbedRootView as? UINavigationController)?.topViewController as? ManagedObjectContextSettable {
+                contextSettableController.managedObjectContext = managedObjectContext
+            }
+            
+            if var syncSettableCoordinator = (tabbedRootView as? UINavigationController)?.topViewController as? SyncCoordinatorSettable {
+                syncSettableCoordinator.syncCoordinator = syncCoordinator
+            }
+            
+            // Deals with root tabs that are single views i.e. wishlist
             if var contextSettableController = tabbedRootView as? ManagedObjectContextSettable {
                 contextSettableController.managedObjectContext = managedObjectContext
             }

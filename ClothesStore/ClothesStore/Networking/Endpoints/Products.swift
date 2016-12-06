@@ -32,8 +32,4 @@ extension Products: Endpoint {
     var method: String {
         return "GET"
     }
-    
-    var headers: [String: String]? {
-        return nil
-    }
 }

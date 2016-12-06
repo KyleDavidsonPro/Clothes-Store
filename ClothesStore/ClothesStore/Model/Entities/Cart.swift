@@ -10,7 +10,7 @@ import CoreData
 import ObjectMapper
 
 class Cart: NSManagedObject {
-    @NSManaged var id: String
+    @NSManaged var id: NSNumber
     @NSManaged var products: Set<Product>?
 }
 

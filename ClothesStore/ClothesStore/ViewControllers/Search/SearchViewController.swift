@@ -11,6 +11,8 @@ import CoreData
 import ObjectMapper
 
 class SearchViewController: UIViewController, ManagedObjectContextSettable, SyncCoordinatorSettable {
+    static let productSelectSegueId = "ShowProductSegue"
+    
     var managedObjectContext: NSManagedObjectContext!
     weak var syncCoordinator: SyncCoordinator!
     
@@ -21,8 +23,7 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
     var dataProvider: DataProvider!
     
     func setupTable() {
-        tableView.contentInset = UIEdgeInsetsMake(20, 0, 49, 0)
-        
+        self.tableView.delegate = self
         let frc = NSFetchedResultsController<NSManagedObject>(fetchRequest: Product.sortedFetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
@@ -40,6 +41,14 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productDetailVC = segue.destination as? ProductDetailViewController {
+            let product = dataSource.selectedObject! as Product
+            productDetailVC.product = product
+            productDetailVC.syncCoordinator = syncCoordinator
+        }
+    }
 }
 
 // MARK: - Data Provider Delegate
@@ -53,6 +62,13 @@ extension SearchViewController: DataProviderDelegate {
 extension SearchViewController: DataSourceDelegate {
     func cellIdentifierForObject(_ object: Product) -> String {
         return "SearchTableViewCell"
+    }
+}
+
+// MARK: - UITableViewDelegate
+extension SearchViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: SearchViewController.productSelectSegueId, sender: self)
     }
 }
 

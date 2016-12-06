@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1707EB561DF7489E004198D2 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1707EB551DF7489E004198D2 /* ProductDetailViewController.swift */; };
 		171925D51DF7060E00DC5C03 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D41DF7060E00DC5C03 /* CoreDataStack.swift */; };
 		171925D81DF736F000DC5C03 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D71DF736F000DC5C03 /* Cart.swift */; };
 		171925DA1DF7387200DC5C03 /* CartUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D91DF7387200DC5C03 /* CartUploader.swift */; };
+		171925DC1DF7399B00DC5C03 /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925DB1DF7399B00DC5C03 /* ShoppingCart.swift */; };
 		1764E5121DF5F9190026E260 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5111DF5F9190026E260 /* APIManager.swift */; };
 		1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5131DF5FA7B0026E260 /* Endpoint.swift */; };
 		1764E5171DF5FB4E0026E260 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5161DF5FB4E0026E260 /* Products.swift */; };
@@ -61,9 +63,11 @@
 
 /* Begin PBXFileReference section */
 		03FAF7CF02C2026CFFBFF493 /* Pods-ClothesStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore.debug.xcconfig"; sourceTree = "<group>"; };
+		1707EB551DF7489E004198D2 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		171925D41DF7060E00DC5C03 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		171925D71DF736F000DC5C03 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		171925D91DF7387200DC5C03 /* CartUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartUploader.swift; sourceTree = "<group>"; };
+		171925DB1DF7399B00DC5C03 /* ShoppingCart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		1764E5111DF5F9190026E260 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1764E5131DF5FA7B0026E260 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1764E5161DF5FB4E0026E260 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
@@ -142,7 +146,6 @@
 				171925D71DF736F000DC5C03 /* Cart.swift */,
 				17DFC3361DF60C0A00BA6E69 /* Product.swift */,
 			);
-			name = Entities;
 			path = Entities;
 			sourceTree = "<group>";
 		};
@@ -153,7 +156,6 @@
 				1764E5111DF5F9190026E260 /* APIManager.swift */,
 				1764E5131DF5FA7B0026E260 /* Endpoint.swift */,
 			);
-			name = Networking;
 			path = Networking;
 			sourceTree = "<group>";
 		};
@@ -161,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				1764E5161DF5FB4E0026E260 /* Products.swift */,
+				171925DB1DF7399B00DC5C03 /* ShoppingCart.swift */,
 			);
-			name = Endpoints;
 			path = Endpoints;
 			sourceTree = "<group>";
 		};
@@ -231,7 +233,6 @@
 				1783531B1DF5EFCD006ADAD4 /* CartViewController.swift */,
 				178352EE1DF5E9AA006ADAD4 /* WishlistViewController.swift */,
 			);
-			name = ViewControllers;
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
@@ -242,7 +243,6 @@
 				17DFC3321DF60B2B00BA6E69 /* ClothesStore.xcdatamodeld */,
 				171925D41DF7060E00DC5C03 /* CoreDataStack.swift */,
 			);
-			name = Model;
 			path = Model;
 			sourceTree = "<group>";
 		};
@@ -252,7 +252,6 @@
 				17F42A321DF6277C00F89314 /* ManagedObjectContextSettable.swift */,
 				17F42A341DF6279B00F89314 /* SyncCoordinatorSettable.swift */,
 			);
-			name = DependancyInjectables;
 			path = DependancyInjectables;
 			sourceTree = "<group>";
 		};
@@ -263,7 +262,6 @@
 				17F42A391DF62A9E00F89314 /* ChangeProcessor.swift */,
 				17F42A3E1DF6304A00F89314 /* SyncCoordinator.swift */,
 			);
-			name = Sync;
 			path = Sync;
 			sourceTree = "<group>";
 		};
@@ -274,7 +272,6 @@
 				17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */,
 				17F42A401DF633F300F89314 /* ProductsDownloader.swift */,
 			);
-			name = ChangeProcessors;
 			path = ChangeProcessors;
 			sourceTree = "<group>";
 		};
@@ -287,7 +284,6 @@
 				17F42A471DF63CCC00F89314 /* FetchedResultsDataProvider.swift */,
 				17F42A491DF640B600F89314 /* TableViewDataSource.swift */,
 			);
-			name = "Data Handlers";
 			path = "Data Handlers";
 			sourceTree = "<group>";
 		};
@@ -296,8 +292,8 @@
 			children = (
 				17F42A501DF6FD3A00F89314 /* SearchTableViewCell.swift */,
 				178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */,
+				1707EB551DF7489E004198D2 /* ProductDetailViewController.swift */,
 			);
-			name = Search;
 			path = Search;
 			sourceTree = "<group>";
 		};
@@ -611,6 +607,7 @@
 			files = (
 				17DFC3341DF60B2B00BA6E69 /* ClothesStore.xcdatamodeld in Sources */,
 				17F42A461DF63C9A00F89314 /* DataSource.swift in Sources */,
+				171925DC1DF7399B00DC5C03 /* ShoppingCart.swift in Sources */,
 				1783531C1DF5EFCD006ADAD4 /* CartViewController.swift in Sources */,
 				17F42A441DF63C7200F89314 /* DataProvider.swift in Sources */,
 				17DFC3371DF60C0A00BA6E69 /* Product.swift in Sources */,
@@ -631,6 +628,7 @@
 				171925D51DF7060E00DC5C03 /* CoreDataStack.swift in Sources */,
 				1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */,
 				17F42A411DF633F300F89314 /* ProductsDownloader.swift in Sources */,
+				1707EB561DF7489E004198D2 /* ProductDetailViewController.swift in Sources */,
 				17F42A4A1DF640B600F89314 /* TableViewDataSource.swift in Sources */,
 				178352ED1DF5E9AA006ADAD4 /* SearchViewController.swift in Sources */,
 			);

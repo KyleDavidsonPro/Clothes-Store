@@ -10,27 +10,22 @@ import Foundation
 import UIKit
 
 class SearchTableViewCell: UITableViewCell {
-    @IBOutlet var name: UILabel!
-    @IBOutlet var category: UILabel!
-    @IBOutlet var price: UILabel!
-    
-    @IBOutlet var addToCartButton: UIButton!
-    
-    @IBAction func addToCart() {
-        print("test")
-    }
+    @IBOutlet var productNameLabel: UILabel!
+    @IBOutlet var productCategoryLabel: UILabel!
+    @IBOutlet var productPriceLabel: UILabel!
+    @IBOutlet var productStockLabel: UILabel!
 }
 
 extension SearchTableViewCell: ConfigurableCell {
     func configure(forObject object: Product) {
-        name.text = object.name
-        category.text = object.category
-        addToCartButton.setTitle("Add To Cart (\(object.stock) Available)", for: .normal)
+        productNameLabel.text = object.name
+        productCategoryLabel.text = object.category
+        productStockLabel.text = "\(object.stock) Available"
         
         if let reducedPrice = buildReducedPriceLabel(forProduct: object) {
-            price.attributedText = reducedPrice
+            productPriceLabel.attributedText = reducedPrice
         } else {
-            price.text = "£\(object.price)"
+            productPriceLabel.text = "£\(object.price)"
         }
     }
     

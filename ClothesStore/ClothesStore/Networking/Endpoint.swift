@@ -18,4 +18,17 @@ protocol Endpoint {
     var method: String { get }
     /// http headers for this endpoint
     var headers: [String: String]? { get }
+    /// optional http body for this endpoint
+    var body: Data? { get }
+}
+
+// MARK: - Default Values
+extension Endpoint {
+    var headers: [String: String]? {
+        return nil
+    }
+    
+    var body: Data? {
+        return nil
+    }
 }

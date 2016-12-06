@@ -24,6 +24,7 @@ struct APIManager {
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method
         
+        
         if let headers = endpoint.headers {
             for (header, value) in headers {
                 request.addValue(value, forHTTPHeaderField: header)
