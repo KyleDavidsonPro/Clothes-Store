@@ -100,4 +100,12 @@ extension NSManagedObjectContext {
         }
         return obj
     }
+    
+    public func trySave() {
+        do {
+            try self.save()
+        } catch {
+            print("Failure to save \(error)")
+        }
+    }
 }

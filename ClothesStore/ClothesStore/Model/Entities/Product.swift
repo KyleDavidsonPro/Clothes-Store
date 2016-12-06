@@ -18,6 +18,7 @@ class Product: NSManagedObject, Mappable {
     @NSManaged var stock: NSNumber
     
     @NSManaged var cart: Cart?
+    @NSManaged var cartId: NSNumber?
     
     private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
         super.init(entity: entity, insertInto: context)
@@ -29,7 +30,6 @@ class Product: NSManagedObject, Mappable {
             let entity = NSEntityDescription.entity(forEntityName: "Product", in: context) else {
                 return nil
         }
-        
         
         super.init(entity: entity, insertInto: context)
     }
@@ -51,7 +51,8 @@ extension Product: ManagedObjectType {
     }
     
     public static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [NSSortDescriptor(key: Keys.name.rawValue, ascending: false)]
+        return [NSSortDescriptor(key: Keys.category.rawValue, ascending: true),
+                NSSortDescriptor(key: Keys.name.rawValue, ascending: true)]
     }
 }
 
@@ -64,6 +65,15 @@ extension Product {
         case price = "price"
         case oldPrice = "oldPrice"
         case stock = "stock"
+        case cart = "cart"
+    }
+    
+    public static func productsInCart() -> NSFetchRequest<NSManagedObject> {
+        let request = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        request.sortDescriptors = defaultSortDescriptors
+        request.predicate = NSPredicate(format: "%K.%K == 1", Keys.cart.rawValue, Cart.Keys.id.rawValue)
+    
+        return request
     }
 }
 

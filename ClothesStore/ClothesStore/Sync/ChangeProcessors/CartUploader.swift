@@ -10,7 +10,7 @@ import CoreData
 import SwiftyJSON
 import ObjectMapper
 
-/// ChangeProcessor for downloading specific downloader with ID
+/// ChangeProcessor for adding product to shopping cart
 class CartUploader: ChangeProcessor {
     var product: Product
     
@@ -21,7 +21,8 @@ class CartUploader: ChangeProcessor {
     func fetchRemoteRecords(forContext context: SyncCoordinatorContext) {
         context.remote.request(endpoint: ShoppingCart.add(product)) { (jsonData) in
             guard let productDict = jsonData.dictionaryObject,
-                let _ = productDict["productId"] as? NSNumber else {
+                let _ = productDict["productId"] as? NSNumber,
+                let cartId = productDict["cartId"] as? NSNumber else {
                     return
             }
             
@@ -31,13 +32,10 @@ class CartUploader: ChangeProcessor {
             // Associate the product to the shopping cart
             if let shoppingCart = Cart.findOrFetchInContext(context.moc, matchingPredicate: cartPredicate) {
                 self.product.cart = shoppingCart
+                self.product.cartId = cartId
             }
             
-            do {
-                try context.moc.save()
-            } catch {
-                print("Failure to save \(error)")
-            }
+            context.moc.trySave()
         }
     }
 }

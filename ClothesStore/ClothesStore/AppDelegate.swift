@@ -79,12 +79,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let localShoppingCart = NSEntityDescription.insertNewObject(forEntityName: "Cart", into: managedObjectContext) as! Cart
             localShoppingCart.id = 1
             
-            do {
-                try managedObjectContext.save()
-            } catch {
-                print("Failure to save \(error)")
-            }
-            
+            managedObjectContext.trySave()
             return
         }
     }

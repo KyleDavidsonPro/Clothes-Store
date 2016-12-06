@@ -24,6 +24,7 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
     
     func setupTable() {
         self.tableView.delegate = self
+
         let frc = NSFetchedResultsController<NSManagedObject>(fetchRequest: Product.sortedFetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
@@ -33,6 +34,7 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Shop"
         syncCoordinator.sync(changeProcessor: ProductsDownloader())
         setupTable()
     }
@@ -62,6 +64,14 @@ extension SearchViewController: DataProviderDelegate {
 extension SearchViewController: DataSourceDelegate {
     func cellIdentifierForObject(_ object: Product) -> String {
         return "SearchTableViewCell"
+    }
+    
+    var editable: Bool {
+        return false
+    }
+    
+    func removeObject(_ object: Product)  {
+        //no-op
     }
 }
 

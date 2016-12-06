@@ -67,4 +67,16 @@ class TableViewDataSource<Delegate: DataSourceDelegate, Data: DataProvider, Cell
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return delegate.editable
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            self.tableView.isUserInteractionEnabled = false
+            // Remove the row from the FRC and let change updates handle the rest
+            delegate.removeObject(dataProvider.object(at: indexPath))
+            self.tableView.isUserInteractionEnabled = true
+        }
+    }
 }

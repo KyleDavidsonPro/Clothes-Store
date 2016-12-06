@@ -10,7 +10,7 @@ import CoreData
 import SwiftyJSON
 import ObjectMapper
 
-/// ChangeProcessor for downloading specific downloader with ID
+/// ChangeProcessor for downloading all products
 class ProductsDownloader: ChangeProcessor {
     func fetchRemoteRecords(forContext context: SyncCoordinatorContext) {
         context.remote.request(endpoint: Products.all) { (jsonData) in
@@ -35,11 +35,7 @@ class ProductsDownloader: ChangeProcessor {
                     let _ = Mapper<Product>().map(JSON: productDict)
                 }
                 
-                do {
-                    try context.moc.save()
-                } catch {
-                    print("Failure to save \(error)")
-                }
+                context.moc.trySave()
             }
         }
     }

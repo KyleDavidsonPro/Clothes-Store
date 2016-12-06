@@ -1,5 +1,5 @@
 //
-//  SearchTableViewCell.swift
+//  CartTableViewCell.swift
 //  ClothesStore
 //
 //  Created by Kyle Davidson on 06/12/2016.
@@ -9,18 +9,14 @@
 import Foundation
 import UIKit
 
-class SearchTableViewCell: UITableViewCell {
+class CartTableViewCell: UITableViewCell {
     @IBOutlet var productNameLabel: UILabel!
-    @IBOutlet var productCategoryLabel: UILabel!
     @IBOutlet var productPriceLabel: UILabel!
-    @IBOutlet var productStockLabel: UILabel!
 }
 
-extension SearchTableViewCell: ConfigurableCell {
+extension CartTableViewCell: ConfigurableCell {
     func configure(forObject object: Product) {
         productNameLabel.text = object.name
-        productCategoryLabel.text = object.category
-        productStockLabel.text = "\(object.stock) Available"
         
         if let reducedPrice = Utils.buildReducedPriceLabel(forProduct: object) {
             productPriceLabel.attributedText = reducedPrice
