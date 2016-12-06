@@ -17,6 +17,10 @@ class Product: NSManagedObject, Mappable {
     @NSManaged var oldPrice: NSNumber?
     @NSManaged var stock: NSNumber
     
+    private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
+        super.init(entity: entity, insertInto: context)
+    }
+    
     required init?(map: Map){
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let context = appDelegate.managedObjectContext,
@@ -37,3 +41,27 @@ class Product: NSManagedObject, Mappable {
         stock      <- map["stock"]
     }
 }
+
+// MARK: - Managed Object Type Implementation
+extension Product: ManagedObjectType {
+    public static var entityName: String {
+        return "Product"
+    }
+    
+    public static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: Keys.name.rawValue, ascending: false)]
+    }
+}
+
+// MARK: Convenience Extensions
+extension Product {
+    public enum Keys: String {
+        case id = "id"
+        case name = "name"
+        case category = "category"
+        case price = "price"
+        case oldPrice = "oldPrice"
+        case stock = "stock"
+    }
+}
+

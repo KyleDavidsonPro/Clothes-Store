@@ -19,11 +19,27 @@ class ProductsDownloader: ChangeProcessor {
             }
             
             for productJson in productsJson {
-                guard let productDict = productJson.dictionaryObject else {
+                guard let productDict = productJson.dictionaryObject,
+                    let id = productDict["productId"] as? NSNumber else {
                     continue
                 }
                 
-                let product = Mapper<Product>().map(JSON: productDict)
+                // Check to see if we already have the remote object locally
+                let predicate = NSPredicate(format: "%K == %@", Product.Keys.id.rawValue, id)
+                
+                //If it already exists just update data, if not create new
+                if let existingProduct = Product.findOrFetchInContext(context.moc, matchingPredicate: predicate) {
+                    let map = Map(mappingType: .fromJSON, JSON: productDict)
+                    existingProduct.mapping(map: map)
+                } else {
+                    let _ = Mapper<Product>().map(JSON: productDict)
+                }
+                
+                do {
+                    try context.moc.save()
+                } catch {
+                    print("Failure to save \(error)")
+                }
             }
         }
     }

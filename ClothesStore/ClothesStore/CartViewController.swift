@@ -11,7 +11,7 @@ import CoreData
 
 class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCoordinatorSettable {
     var managedObjectContext: NSManagedObjectContext!
-    var syncCoordinator: SyncCoordinator!
+    weak var syncCoordinator: SyncCoordinator!
     
     override func viewDidLoad() {
         super.viewDidLoad()

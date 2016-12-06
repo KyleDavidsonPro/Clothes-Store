@@ -20,11 +20,27 @@ class ProductDownloader: ChangeProcessor {
     
     func fetchRemoteRecords(forContext context: SyncCoordinatorContext) {
         context.remote.request(endpoint: Products.get(id)) { (jsonData) in
-            guard let productJson = jsonData.dictionaryObject else {
+            guard let productDict = jsonData.dictionaryObject,
+                let id = productDict["productId"] as? NSNumber else {
                 return
             }
             
-            let product = Mapper<Product>().map(JSON: productJson)
+            // Check to see if we already have the remote object locally
+            let predicate = NSPredicate(format: "%K == %@", Product.Keys.id.rawValue, id)
+            
+            //If it already exists just update data, if not create new
+            if let existingProduct = Product.findOrFetchInContext(context.moc, matchingPredicate: predicate) {
+                let map = Map(mappingType: .fromJSON, JSON: productDict)
+                existingProduct.mapping(map: map)
+            } else {
+                let _ = Mapper<Product>().map(JSON: productDict)
+            }
+            
+            do {
+                try context.moc.save()
+            } catch {
+                print("Failure to save \(error)")
+            }
         }
     }
 }
