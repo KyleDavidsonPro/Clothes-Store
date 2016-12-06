@@ -17,6 +17,8 @@ class Product: NSManagedObject, Mappable {
     @NSManaged var oldPrice: NSNumber?
     @NSManaged var stock: NSNumber
     
+    @NSManaged var cart: Cart?
+    
     private override init(entity: NSEntityDescription, insertInto context: NSManagedObjectContext?) {
         super.init(entity: entity, insertInto: context)
     }

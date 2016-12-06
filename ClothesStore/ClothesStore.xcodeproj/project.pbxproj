@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		171925D51DF7060E00DC5C03 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D41DF7060E00DC5C03 /* CoreDataStack.swift */; };
+		171925D81DF736F000DC5C03 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D71DF736F000DC5C03 /* Cart.swift */; };
+		171925DA1DF7387200DC5C03 /* CartUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171925D91DF7387200DC5C03 /* CartUploader.swift */; };
 		1764E5121DF5F9190026E260 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5111DF5F9190026E260 /* APIManager.swift */; };
 		1764E5141DF5FA7B0026E260 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5131DF5FA7B0026E260 /* Endpoint.swift */; };
 		1764E5171DF5FB4E0026E260 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5161DF5FB4E0026E260 /* Products.swift */; };
@@ -60,6 +62,8 @@
 /* Begin PBXFileReference section */
 		03FAF7CF02C2026CFFBFF493 /* Pods-ClothesStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ClothesStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ClothesStore/Pods-ClothesStore.debug.xcconfig"; sourceTree = "<group>"; };
 		171925D41DF7060E00DC5C03 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		171925D71DF736F000DC5C03 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		171925D91DF7387200DC5C03 /* CartUploader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartUploader.swift; sourceTree = "<group>"; };
 		1764E5111DF5F9190026E260 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		1764E5131DF5FA7B0026E260 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1764E5161DF5FB4E0026E260 /* Products.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
@@ -132,6 +136,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171925D61DF736E000DC5C03 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				17DFC3361DF60C0A00BA6E69 /* Product.swift */,
+				171925D71DF736F000DC5C03 /* Cart.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
 		1764E5101DF5F8670026E260 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,8 +234,8 @@
 		17DFC3351DF60BE100BA6E69 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				171925D61DF736E000DC5C03 /* Entities */,
 				17DFC3321DF60B2B00BA6E69 /* ClothesStore.xcdatamodeld */,
-				17DFC3361DF60C0A00BA6E69 /* Product.swift */,
 				171925D41DF7060E00DC5C03 /* CoreDataStack.swift */,
 			);
 			name = Model;
@@ -252,6 +265,7 @@
 			children = (
 				17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */,
 				17F42A401DF633F300F89314 /* ProductsDownloader.swift */,
+				171925D91DF7387200DC5C03 /* CartUploader.swift */,
 			);
 			name = ChangeProcessors;
 			sourceTree = "<group>";
@@ -596,7 +610,9 @@
 				1764E5121DF5F9190026E260 /* APIManager.swift in Sources */,
 				1764E5171DF5FB4E0026E260 /* Products.swift in Sources */,
 				17F42A3A1DF62A9E00F89314 /* ChangeProcessor.swift in Sources */,
+				171925DA1DF7387200DC5C03 /* CartUploader.swift in Sources */,
 				17F42A4C1DF640E800F89314 /* ConfigurableCell.swift in Sources */,
+				171925D81DF736F000DC5C03 /* Cart.swift in Sources */,
 				17F42A481DF63CCC00F89314 /* FetchedResultsDataProvider.swift in Sources */,
 				17F42A351DF6279B00F89314 /* SyncCoordinatorSettable.swift in Sources */,
 				17F42A3F1DF6304A00F89314 /* SyncCoordinator.swift in Sources */,
