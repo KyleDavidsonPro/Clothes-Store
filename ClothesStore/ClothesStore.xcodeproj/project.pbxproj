@@ -17,7 +17,7 @@
 		178352F21DF5E9AA006ADAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178352F01DF5E9AA006ADAD4 /* Main.storyboard */; };
 		178352F41DF5E9AA006ADAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178352F31DF5E9AA006ADAD4 /* Assets.xcassets */; };
 		178352F71DF5E9AA006ADAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178352F51DF5E9AA006ADAD4 /* LaunchScreen.storyboard */; };
-		178353021DF5E9AA006ADAD4 /* ClothesStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178353011DF5E9AA006ADAD4 /* ClothesStoreTests.swift */; };
+		178353021DF5E9AA006ADAD4 /* DependancyInjectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178353011DF5E9AA006ADAD4 /* DependancyInjectionTests.swift */; };
 		1783530D1DF5E9AA006ADAD4 /* ClothesStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783530C1DF5E9AA006ADAD4 /* ClothesStoreUITests.swift */; };
 		1783531C1DF5EFCD006ADAD4 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783531B1DF5EFCD006ADAD4 /* CartViewController.swift */; };
 		17DFC3311DF60B0400BA6E69 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17DFC3301DF60B0400BA6E69 /* CoreData.framework */; };
@@ -72,7 +72,7 @@
 		178352F61DF5E9AA006ADAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		178352F81DF5E9AA006ADAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178352FD1DF5E9AA006ADAD4 /* ClothesStoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClothesStoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		178353011DF5E9AA006ADAD4 /* ClothesStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesStoreTests.swift; sourceTree = "<group>"; };
+		178353011DF5E9AA006ADAD4 /* DependancyInjectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependancyInjectionTests.swift; sourceTree = "<group>"; };
 		178353031DF5E9AA006ADAD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		178353081DF5E9AA006ADAD4 /* ClothesStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClothesStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1783530C1DF5E9AA006ADAD4 /* ClothesStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesStoreUITests.swift; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 		178353001DF5E9AA006ADAD4 /* ClothesStoreTests */ = {
 			isa = PBXGroup;
 			children = (
-				178353011DF5E9AA006ADAD4 /* ClothesStoreTests.swift */,
+				178353011DF5E9AA006ADAD4 /* DependancyInjectionTests.swift */,
 				178353031DF5E9AA006ADAD4 /* Info.plist */,
 			);
 			path = ClothesStoreTests;
@@ -614,7 +614,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				178353021DF5E9AA006ADAD4 /* ClothesStoreTests.swift in Sources */,
+				178353021DF5E9AA006ADAD4 /* DependancyInjectionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

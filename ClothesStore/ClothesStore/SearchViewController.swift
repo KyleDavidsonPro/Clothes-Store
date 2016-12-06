@@ -21,6 +21,8 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
     var dataProvider: DataProvider!
     
     func setupTable() {
+        tableView.contentInset = UIEdgeInsetsMake(20, 0, 49, 0)
+        
         let frc = NSFetchedResultsController<NSManagedObject>(fetchRequest: Product.sortedFetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
