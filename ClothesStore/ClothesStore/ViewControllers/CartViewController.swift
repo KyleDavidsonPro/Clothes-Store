@@ -28,14 +28,19 @@ class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCo
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
         dataSource = TableViewDataSource(tableView: tableView, dataProvider: dataProvider, delegate: self)
         self.dataProvider = dataProvider
+        
+        /// Create Footer
+        let footerView = Bundle.main.loadNibNamed("CartTableFooterView", owner: nil, options: nil)?.first as? CartTableFooterView
+        
+        tableView.tableFooterView = footerView
+        buildCartMetadata()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "My Cart"
+       //self.title = "My Cart"
         setupTable()
         navigationItem.leftBarButtonItem = editButtonItem
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -62,12 +67,35 @@ class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCo
         }
         self.tableView.isUserInteractionEnabled = true
     }
+    
+    func buildCartMetadata() {
+        let footer = tableView.tableFooterView as? CartTableFooterView
+        var subtotal: Double = 0
+        var totalItems = 0
+        
+        if let products = dataProvider.allObjects() {
+            totalItems = products.count
+            
+            for product in products {
+                guard let product = product as? Product else {
+                    continue
+                }
+                
+                let productPrice = product.price as Double
+                subtotal = subtotal + productPrice
+            }
+        }
+        
+        footer?.subtotalLabel.text = "£" + String(format: "%.2f", arguments: [subtotal])
+        footer?.itemsCountLabel.text = "Items: \(totalItems)"
+    }
 }
 
 // MARK: - Data Provider Delegate
 extension CartViewController: DataProviderDelegate {
     func dataProviderDidUpdate(_ updates: [DataProviderUpdate<Product>]?) {
         self.dataSource.processUpdates(updates: updates)
+        buildCartMetadata()
     }
 }
 
