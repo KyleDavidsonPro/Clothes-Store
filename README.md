@@ -4,7 +4,7 @@ Clothes Store Case Study
 ## Trello Board
 https://trello.com/b/aUmBc17G/deloitte-digital-clothes-store
 
-### Technical Notes
+## Technical Notes
 
 The solution is written in Swift 3 in Xcode 8.x and can be categorised into the following components:
 1. Networking Layer
@@ -25,7 +25,7 @@ In a real world scenario this framework would be fleshed out and used to drive o
 ### Other
 Check out the `Data Handlers` in the project, it's basically a protocol driven way to implement typical NSFetchedResultsController/ Table View Delegate and DataSource behaviour across multiple view controllers without having any of the boilerplate in the View Controller itself. It's driven by generics.
 
-### 3rd Party Dependancies
+### 3rd Party Dependancies (Cocoapods)
 1. SwiftyJSON: https://github.com/SwiftyJSON/SwiftyJSON
 2. ObjectMapper: https://github.com/Hearst-DD/ObjectMapper
 
