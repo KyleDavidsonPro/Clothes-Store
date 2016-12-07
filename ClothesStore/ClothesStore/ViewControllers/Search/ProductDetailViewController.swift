@@ -21,6 +21,15 @@ class ProductDetailViewController: UIViewController, SyncCoordinatorSettable {
     @IBAction func addToCart() {
         syncCoordinator.sync(changeProcessor: CartUploader(product: product))
         let _ = self.navigationController?.popViewController(animated: true)
+        
+        if let cardTabItem = self.tabBarController?.tabBar.items?.last {
+            if let badgeVal = cardTabItem.badgeValue,
+                let existingVal = Int(badgeVal) {
+                cardTabItem.badgeValue = "\(existingVal + 1)"
+            } else {
+                cardTabItem.badgeValue = "1"
+            }
+        }
     }
     
     override func viewDidLoad() {

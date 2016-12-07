@@ -18,6 +18,12 @@ class SearchTableViewCell: UITableViewCell {
 
 extension SearchTableViewCell: ConfigurableCell {
     func configure(forObject object: Product) {
+        if object.stock == 0 {
+            disableCell()
+        } else {
+            enableCell()
+        }
+        
         productNameLabel.text = object.name
         productCategoryLabel.text = object.category
         productStockLabel.text = "\(object.stock) Available"
@@ -27,5 +33,22 @@ extension SearchTableViewCell: ConfigurableCell {
         } else {
             productPriceLabel.text = "£\(object.price)"
         }
+    }
+    
+    /// Disable Cell when stock is not available
+    private func disableCell() -> Void {
+        self.isUserInteractionEnabled = false
+        self.accessoryType = .none
+        self.productNameLabel.textColor = Utils.ClothesStoreGrayColor
+        self.productPriceLabel.textColor = Utils.ClothesStoreGrayColor
+        self.productStockLabel.textColor = UIColor.red
+    }
+    
+    private func enableCell() -> Void {
+        self.isUserInteractionEnabled = true
+        self.accessoryType = .disclosureIndicator
+        self.productNameLabel.textColor = UIColor.black
+        self.productPriceLabel.textColor = UIColor.black
+        self.productStockLabel.textColor = Utils.ClothesStoreGrayColor
     }
 }
