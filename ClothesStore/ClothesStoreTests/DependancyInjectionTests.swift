@@ -36,14 +36,10 @@ class DependancyInjectionTests: XCTestCase {
             if var mocSettable = (viewController as? UINavigationController)?.topViewController as? ManagedObjectContextSettable {
                 mocSettable.managedObjectContext = NSManagedObjectContext()
             }
-
-            if var mocSettable = viewController as? ManagedObjectContextSettable {
-                mocSettable.managedObjectContext = NSManagedObjectContext()
-            }
         }
         
         guard let searchVC = (tabBarViewControllers.first as? UINavigationController)?.topViewController as? SearchViewController,
-            let cartVC = tabBarViewControllers.last as? CartViewController else {
+            let cartVC = (tabBarViewControllers.last as? UINavigationController)?.topViewController as? CartViewController else {
             XCTFail("Unexpected view controller for first tab")
             return
         }
@@ -59,14 +55,10 @@ class DependancyInjectionTests: XCTestCase {
             if var syncSettable = (viewController as? UINavigationController)?.topViewController as? SyncCoordinatorSettable {
                 syncSettable.syncCoordinator = mockCoordinator
             }
-            
-            if var syncSettable = viewController as? SyncCoordinatorSettable {
-                syncSettable.syncCoordinator = mockCoordinator
-            }
         }
         
         guard let searchVC = (tabBarViewControllers.first as? UINavigationController)?.topViewController as? SearchViewController,
-            let cartVC = tabBarViewControllers.last as? CartViewController else {
+            let cartVC = (tabBarViewControllers.last as? UINavigationController)?.topViewController as? CartViewController else {
                 XCTFail("Unexpected view controller for first tab")
                 return
         }

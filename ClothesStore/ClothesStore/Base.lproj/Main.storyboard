@@ -22,7 +22,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4DK-M6-Be6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1385" y="758"/>
+            <point key="canvasLocation" x="-1716" y="758"/>
         </scene>
         <!--Shop-->
         <scene sceneID="hNz-n2-bh7">
@@ -93,6 +93,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="SearchTable"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-613.60000000000002" y="757.87106446776613"/>
+            <point key="canvasLocation" x="-985" y="758"/>
         </scene>
         <!--Product Detail View Controller-->
         <scene sceneID="zWH-xI-nM6">
@@ -181,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJP-8L-jeh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615.20000000000005" y="1520.6896551724139"/>
+            <point key="canvasLocation" x="-985" y="1515"/>
         </scene>
         <!--Cart-->
         <scene sceneID="jF4-jZ-bXC">
@@ -231,6 +234,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="CartTable"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -249,7 +255,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="teg-qr-9OP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="44"/>
+            <point key="canvasLocation" x="934" y="1514"/>
         </scene>
         <!--Cart-->
         <scene sceneID="zkV-BY-uIY">
@@ -266,7 +272,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Lu-Np-Kcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="934" y="-700"/>
+            <point key="canvasLocation" x="934" y="758"/>
         </scene>
         <!--Wishlist-->
         <scene sceneID="wg7-f3-ORb">
@@ -297,7 +303,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="774"/>
+            <point key="canvasLocation" x="-1" y="758"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

@@ -9,7 +9,6 @@
 import XCTest
 
 class ClothesStoreUITests: XCTestCase {
-        
     override func setUp() {
         super.setUp()
         
@@ -20,9 +19,7 @@ class ClothesStoreUITests: XCTestCase {
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         if #available(iOS 9.0, *) {
             XCUIApplication().launch()
-        } else {
-            // Fallback on earlier versions
-        }
+        } 
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -32,9 +29,37 @@ class ClothesStoreUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testAddToBasket() {
+        if #available(iOS 9.0, *) {
+            let app = XCUIApplication()
+            let storeTable = app.tables["SearchTable"]
+            let storeCells = storeTable.cells
+            
+            XCUIDevice.shared().orientation = .portrait
+
+            storeCells.staticTexts["Flip Flops, Red"].tap()
+            app.buttons["Add To Cart"].tap()
+            XCUIDevice.shared().orientation = .portrait
+            
+            let cartTable = app.tables["CartTable"]
+            XCUIDevice.shared().orientation = .portrait
+            XCUIApplication().tabBars.buttons["Cart"].tap()
+            let cartEntry = XCUIApplication().tables["CartTable"].cells.staticTexts["Flip Flops, Red"]
+            
+            //Verify the item has been added to shopping cart
+            XCTAssertNotNil(cartEntry)
+            
+            cartEntry.swipeLeft()
+            cartTable.buttons["Delete"].tap()
+            
+            let existsPredicate = NSPredicate(format: "isHittable == false")
+            self.expectation(for: existsPredicate,
+                                 evaluatedWith: cartEntry, handler: nil)
+            self.waitForExpectations(timeout: 5.0) { (error) -> Void in
+                if error != nil {
+                    fatalError("Failed to wait for \(cartEntry) after 3 seconds.")
+                }
+            }
+        }
     }
-    
 }
