@@ -9,6 +9,7 @@
 import CoreData
 import ObjectMapper
 
+/// Product Managed Object
 class Product: NSManagedObject, Mappable {
     @NSManaged var id: NSNumber
     @NSManaged var name: String
@@ -17,6 +18,7 @@ class Product: NSManagedObject, Mappable {
     @NSManaged var oldPrice: NSNumber?
     @NSManaged var stock: NSNumber
     
+    /// Relationships
     @NSManaged var cart: Cart?
     @NSManaged var cartId: NSNumber?
     
@@ -34,6 +36,7 @@ class Product: NSManagedObject, Mappable {
         super.init(entity: entity, insertInto: context)
     }
     
+    // MARK: - Mappings
     func mapping(map: Map) {
         id         <- map["productId"]
         name       <- map["name"]

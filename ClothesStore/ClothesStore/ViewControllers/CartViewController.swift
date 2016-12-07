@@ -23,13 +23,14 @@ class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCo
     
     func setupTable() {
         tableView.delegate = self
-        let frc = NSFetchedResultsController<NSManagedObject>(fetchRequest: Product.productsInCart(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         
+        let frc = NSFetchedResultsController<NSManagedObject>(fetchRequest: Product.productsInCart(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
+        
         dataSource = TableViewDataSource(tableView: tableView, dataProvider: dataProvider, delegate: self)
         self.dataProvider = dataProvider
         
-        /// Create Footer
+        /// Create Footer for table
         let footerView = Bundle.main.loadNibNamed("CartTableFooterView", owner: nil, options: nil)?.first as? CartTableFooterView
         
         tableView.tableFooterView = footerView
@@ -38,20 +39,14 @@ class CartViewController: UIViewController, ManagedObjectContextSettable, SyncCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       //self.title = "My Cart"
         setupTable()
+        /// Navigation Bar Items
         navigationItem.leftBarButtonItem = editButtonItem
+        deleteButton = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(self.deleteProducts))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        deleteButton = UIBarButtonItem(title: "Delete", style: .done, target: self, action: #selector(self.deleteProducts))
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func deleteProducts() {

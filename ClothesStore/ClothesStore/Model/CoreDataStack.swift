@@ -52,6 +52,7 @@ extension ManagedObjectType {
         }
         return obj
     }
+    
     /**
      Iterates over the context’s registeredObjects set, which contains all managed objects the context currently knows about.
      It does this until it finds one that is not a fault, is of the correct type, and matches a given predicate:
@@ -85,6 +86,7 @@ extension ManagedObjectType {
         guard let result = results as? [Self] else {
             fatalError("Fetched objects have wrong type")
         }
+        
         return result
     }
 }
@@ -101,6 +103,7 @@ extension NSManagedObjectContext {
         return obj
     }
     
+    /// Convenience wrapper for try save
     public func trySave() {
         do {
             try self.save()

@@ -9,6 +9,7 @@
 import CoreData
 import ObjectMapper
 
+/// Cart Managed Object
 class Cart: NSManagedObject {
     @NSManaged var id: NSNumber
     @NSManaged var products: Set<Product>?

@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Protocol to be implemented by UITableViewCells to handle data provided by data handlers
 protocol ConfigurableCell {
     associatedtype Object
     func configure(forObject object: Object)

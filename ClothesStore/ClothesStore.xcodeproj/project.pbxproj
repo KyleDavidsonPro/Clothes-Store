@@ -22,7 +22,6 @@
 		1764E5171DF5FB4E0026E260 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764E5161DF5FB4E0026E260 /* Products.swift */; };
 		178352EB1DF5E9AA006ADAD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */; };
 		178352ED1DF5E9AA006ADAD4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */; };
-		178352EF1DF5E9AA006ADAD4 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 178352EE1DF5E9AA006ADAD4 /* WishlistViewController.swift */; };
 		178352F21DF5E9AA006ADAD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178352F01DF5E9AA006ADAD4 /* Main.storyboard */; };
 		178352F41DF5E9AA006ADAD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 178352F31DF5E9AA006ADAD4 /* Assets.xcassets */; };
 		178352F71DF5E9AA006ADAD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 178352F51DF5E9AA006ADAD4 /* LaunchScreen.storyboard */; };
@@ -84,7 +83,6 @@
 		178352E71DF5E9AA006ADAD4 /* ClothesStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClothesStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		178352EE1DF5E9AA006ADAD4 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 		178352F11DF5E9AA006ADAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		178352F31DF5E9AA006ADAD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		178352F61DF5E9AA006ADAD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -261,7 +259,6 @@
 			children = (
 				1707EB601DF75386004198D2 /* Cart */,
 				17F42A4F1DF6FD2900F89314 /* Search */,
-				178352EE1DF5E9AA006ADAD4 /* WishlistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -646,7 +643,6 @@
 				17622F5C1DF772E10051ECDE /* CartTableFooterView.swift in Sources */,
 				17F42A441DF63C7200F89314 /* DataProvider.swift in Sources */,
 				17DFC3371DF60C0A00BA6E69 /* Product.swift in Sources */,
-				178352EF1DF5E9AA006ADAD4 /* WishlistViewController.swift in Sources */,
 				17F42A511DF6FD3A00F89314 /* SearchTableViewCell.swift in Sources */,
 				17F42A3D1DF62AD700F89314 /* ProductDownloader.swift in Sources */,
 				1764E5121DF5F9190026E260 /* APIManager.swift in Sources */,

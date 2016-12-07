@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct Utils {
+    /// Given a product return an NSAttributedString containing the new price with the old price scored out
     static func buildReducedPriceLabel(forProduct product: Product) -> NSAttributedString? {
         guard let oldPriceVal = product.oldPrice else {
             return nil

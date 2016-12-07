@@ -144,6 +144,11 @@
                                 <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Details Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-if-c0O">
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0LM-pY-62y">
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add To Cart"/>
@@ -151,26 +156,20 @@
                                     <action selector="addToCart" destination="327-L7-5LG" eventType="touchUpInside" id="uvd-Bb-qw5"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More Details Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXM-if-c0O">
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="kXI-n6-ukB" secondAttribute="trailing" id="1J5-KH-9Sd"/>
-                            <constraint firstItem="DfY-YB-qhM" firstAttribute="top" secondItem="UXM-if-c0O" secondAttribute="bottom" id="3LP-lv-fyp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FSC-zH-VSl" secondAttribute="trailing" id="40x-Ox-EJ3"/>
                             <constraint firstItem="2il-O5-0Zq" firstAttribute="leading" secondItem="YXd-gV-Hzw" secondAttribute="leadingMargin" id="6XU-FC-81O"/>
                             <constraint firstItem="FSC-zH-VSl" firstAttribute="top" secondItem="2il-O5-0Zq" secondAttribute="bottom" constant="4" id="Cll-Wb-k6n"/>
+                            <constraint firstItem="0LM-pY-62y" firstAttribute="top" secondItem="FSC-zH-VSl" secondAttribute="bottom" constant="20" id="Gbr-Kq-4zT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2il-O5-0Zq" secondAttribute="trailing" id="Iub-xz-ZxM"/>
                             <constraint firstItem="kXI-n6-ukB" firstAttribute="leading" secondItem="YXd-gV-Hzw" secondAttribute="leadingMargin" id="SqZ-Wk-1ks"/>
-                            <constraint firstItem="0LM-pY-62y" firstAttribute="centerY" secondItem="YXd-gV-Hzw" secondAttribute="centerY" id="YAL-Ug-nIf"/>
+                            <constraint firstItem="UXM-if-c0O" firstAttribute="centerX" secondItem="YXd-gV-Hzw" secondAttribute="centerX" id="TRW-5e-8Ap"/>
                             <constraint firstItem="kXI-n6-ukB" firstAttribute="top" secondItem="k0T-ZX-w3q" secondAttribute="bottom" constant="8" id="a7Q-Ec-bkN"/>
-                            <constraint firstItem="UXM-if-c0O" firstAttribute="leading" secondItem="YXd-gV-Hzw" secondAttribute="leadingMargin" id="aFb-qT-90E"/>
+                            <constraint firstItem="UXM-if-c0O" firstAttribute="centerY" secondItem="YXd-gV-Hzw" secondAttribute="centerY" id="cKp-J1-CVI"/>
                             <constraint firstItem="0LM-pY-62y" firstAttribute="centerX" secondItem="YXd-gV-Hzw" secondAttribute="centerX" id="h7G-FC-AQy"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UXM-if-c0O" secondAttribute="trailing" id="hPF-3z-2nL"/>
                             <constraint firstItem="FSC-zH-VSl" firstAttribute="leading" secondItem="YXd-gV-Hzw" secondAttribute="leadingMargin" id="hmP-LT-kwf"/>
                             <constraint firstItem="2il-O5-0Zq" firstAttribute="top" secondItem="kXI-n6-ukB" secondAttribute="bottom" constant="4" id="pzQ-l8-qto"/>
                         </constraints>
@@ -274,37 +273,6 @@
             </objects>
             <point key="canvasLocation" x="934" y="758"/>
         </scene>
-        <!--Wishlist-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="WishlistViewController" customModule="ClothesStore" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
-                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Wishlist" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Wishlist" image="wishlist_icon" selectedImage="wishlist_icon" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1" y="758"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -317,7 +285,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="HL2-YK-7AC" kind="relationship" relationship="viewControllers" id="iJD-hQ-JrG"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="iOk-1L-hrr" kind="relationship" relationship="viewControllers" id="LrM-BI-hcN"/>
                     </connections>
                 </tabBarController>
@@ -328,6 +295,5 @@
     </scenes>
     <resources>
         <image name="cart_icon" width="30" height="28"/>
-        <image name="wishlist_icon" width="30" height="26"/>
     </resources>
 </document>

@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+/// Data Provider implemention for NSFetchedResultsController delegate and functionality
 class FetchedResultsDataProvider<Delegate: DataProviderDelegate>: NSObject, NSFetchedResultsControllerDelegate, DataProvider {
     
     typealias Object = Delegate.Object
@@ -16,15 +17,27 @@ class FetchedResultsDataProvider<Delegate: DataProviderDelegate>: NSObject, NSFe
     init(fetchedResultsController: NSFetchedResultsController<NSManagedObject>, delegate: Delegate) {
         self.fetchedResultsController = fetchedResultsController
         self.delegate = delegate
+        
         super.init()
+        
         fetchedResultsController.delegate = self
-        do { try fetchedResultsController.performFetch() } catch { fatalError("fetch request failed") }
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("fetch request failed")
+        }
     }
     
     func reconfigureFetchRequest(block: (NSFetchRequest<NSManagedObject>) -> ()) {
         NSFetchedResultsController<NSFetchRequestResult>.deleteCache(withName: fetchedResultsController.cacheName)
         block(fetchedResultsController.fetchRequest)
-        do { try fetchedResultsController.performFetch() } catch { fatalError("fetch request failed") }
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("fetch request failed")
+        }
+        
         delegate.dataProviderDidUpdate(nil)
     }
     

@@ -29,19 +29,16 @@ class SearchViewController: UIViewController, ManagedObjectContextSettable, Sync
         
         let dataProvider = FetchedResultsDataProvider(fetchedResultsController: frc, delegate: self)
         dataSource = TableViewDataSource(tableView: tableView, dataProvider: dataProvider, delegate: self)
+        
         self.dataProvider = dataProvider
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Shop"
+        /// Download Products and Setup Table
         syncCoordinator.sync(changeProcessor: ProductsDownloader())
         setupTable()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -70,8 +67,7 @@ extension SearchViewController: DataSourceDelegate {
         return false
     }
     
-    func removeObject(_ object: Product)  {
-        //no-op
+    func removeObject(_ object: Product)  { //no-op 
     }
 }
 

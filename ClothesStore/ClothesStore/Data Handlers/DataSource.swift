@@ -8,9 +8,12 @@
 
 import Foundation
 
+/// Delegate for the data source to configure which views are editable and retrieve cell identifiers
 protocol DataSourceDelegate: class {
     associatedtype Object
+    
     var editable: Bool { get }
+    
     func cellIdentifierForObject(_ object: Object) -> String
     func removeObject(_ object: Object)
 }

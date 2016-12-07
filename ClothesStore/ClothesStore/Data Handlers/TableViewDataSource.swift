@@ -9,14 +9,16 @@
 import Foundation
 import UIKit
 
-
+/// Data Source Implemenation for UITableView functionality
 class TableViewDataSource<Delegate: DataSourceDelegate, Data: DataProvider, Cell: UITableViewCell>: NSObject, UITableViewDataSource where Delegate.Object == Data.Object, Cell: ConfigurableCell, Cell.Object == Data.Object {
     
     required init(tableView: UITableView, dataProvider: Data, delegate: Delegate) {
         self.tableView = tableView
         self.dataProvider = dataProvider
         self.delegate = delegate
+        
         super.init()
+        
         tableView.dataSource = self
         tableView.reloadData()
     }
@@ -56,12 +58,15 @@ class TableViewDataSource<Delegate: DataSourceDelegate, Data: DataProvider, Cell
         return dataProvider.numberOfItems(inSection: section)
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)
+        -> UITableViewCell {
         let object = dataProvider.object(at: indexPath)
         let identifier = delegate.cellIdentifierForObject(object)
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell
-        else { fatalError("Unexpected cell type at \(indexPath)") }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? Cell else {
+            fatalError("Unexpected cell type at \(indexPath)")
+        }
+        
         cell.configure(forObject: object)
     
         return cell
