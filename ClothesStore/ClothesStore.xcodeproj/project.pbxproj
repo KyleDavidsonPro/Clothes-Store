@@ -151,12 +151,13 @@
 		1707EB601DF75386004198D2 /* Cart */ = {
 			isa = PBXGroup;
 			children = (
-				1783531B1DF5EFCD006ADAD4 /* CartViewController.swift */,
-				1707EB611DF75392004198D2 /* CartTableViewCell.swift */,
 				17622F5B1DF772E10051ECDE /* CartTableFooterView.swift */,
 				17622F5D1DF772EE0051ECDE /* CartTableFooterView.xib */,
+				1707EB611DF75392004198D2 /* CartTableViewCell.swift */,
+				1783531B1DF5EFCD006ADAD4 /* CartViewController.swift */,
 			);
 			name = Cart;
+			path = Cart;
 			sourceTree = "<group>";
 		};
 		1707EB631DF753B0004198D2 /* Utils */ = {
@@ -165,6 +166,7 @@
 				1707EB641DF753B6004198D2 /* Utils.swift */,
 			);
 			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		171925D61DF736E000DC5C03 /* Entities */ = {
@@ -220,12 +222,12 @@
 		178352E91DF5E9AA006ADAD4 /* ClothesStore */ = {
 			isa = PBXGroup;
 			children = (
-				1707EB631DF753B0004198D2 /* Utils */,
 				17F42A421DF63C6300F89314 /* Data Handlers */,
 				17F42A311DF6274200F89314 /* DependancyInjectables */,
 				17DFC3351DF60BE100BA6E69 /* Model */,
 				1764E5101DF5F8670026E260 /* Networking */,
 				17F42A361DF6297600F89314 /* Sync */,
+				1707EB631DF753B0004198D2 /* Utils */,
 				1783531A1DF5EF2A006ADAD4 /* ViewControllers */,
 				178352EA1DF5E9AA006ADAD4 /* AppDelegate.swift */,
 				178352F31DF5E9AA006ADAD4 /* Assets.xcassets */,
@@ -295,10 +297,10 @@
 		17F42A3B1DF62AC500F89314 /* ChangeProcessors */ = {
 			isa = PBXGroup;
 			children = (
+				17622F591DF760460051ECDE /* CartRemover.swift */,
 				171925D91DF7387200DC5C03 /* CartUploader.swift */,
 				17F42A3C1DF62AD700F89314 /* ProductDownloader.swift */,
 				17F42A401DF633F300F89314 /* ProductsDownloader.swift */,
-				17622F591DF760460051ECDE /* CartRemover.swift */,
 			);
 			path = ChangeProcessors;
 			sourceTree = "<group>";
@@ -318,9 +320,9 @@
 		17F42A4F1DF6FD2900F89314 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				1707EB551DF7489E004198D2 /* ProductDetailViewController.swift */,
 				17F42A501DF6FD3A00F89314 /* SearchTableViewCell.swift */,
 				178352EC1DF5E9AA006ADAD4 /* SearchViewController.swift */,
-				1707EB551DF7489E004198D2 /* ProductDetailViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
